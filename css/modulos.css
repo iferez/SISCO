@@ -1,0 +1,217 @@
+@import "headerFooter.css";
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner h1 {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: 2px 2px 6px #000000ad;
+}
+
+.subStyle {
+  font-size: 24px;
+}
+
+.modulosDiv {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.modulosDiv h2 {
+  font-weight: bold;
+}
+
+.buscarEmpresa {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+
+.btn-nuevaEmpresa {
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #555555;
+  color: #ffff;
+  padding: 5px 20px;
+  transition: 0.3s;
+}
+
+.btn-nuevaEmpresa:hover {
+  background-color: #555555bb;
+  color: #ffff;
+}
+
+/*CARDS*/
+
+.card a {
+  text-decoration: none;
+}
+
+.card-header {
+  height: 80px;
+}
+
+.card-body {
+  height: 80px;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: bold;
+  color: #030303;
+  font-size: 18px;
+}
+
+.neumaticoImg {
+  max-width: 80px;
+}
+.card i {
+  font-size: 60px;
+}
+
+/* CARD COLOR */
+.bg-neumatico {
+  background-color: #0072bb !important;
+}
+
+.border-neumatico {
+  background-color: #0072bb !important;
+}
+
+.bg-bicicleta {
+  background-color: #d1ebfa !important;
+}
+
+.border-bicicleta {
+  background-color: #d1ebfa !important;
+}
+
+.bg-producto {
+  background-color: #e2ecd1 !important;
+}
+
+.border-producto {
+  background-color: #e2ecd1 !important;
+}
+
+.bg-mobiliario {
+  background-color: #b7d9db !important;
+}
+
+.border-mobiliario {
+  background-color: #b7d9db !important;
+}
+
+/*DJ*/
+
+.djStyle {
+  text-decoration: none;
+  color: #030303;
+  padding: 10px 10px;
+  font-weight: bold;
+  border: 2px solid #7070703b;
+  border-radius: 15px;
+}
+
+.djStyle:hover {
+  color: #707070;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  .subStyle {
+    font-size: 32px;
+  }
+
+  .buscarEmpresa {
+    padding-bottom: 80px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner h1 {
+    font-size: 62px;
+  }
+
+  .subStyle {
+    font-size: 42px;
+  }
+
+  .modulosDiv {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .buscarEmpresa {
+    width: 60%;
+    margin: auto;
+  }
+
+  .btn-nuevaEmpresa {
+    font-size: 18px;
+  }
+
+  .card-title {
+    font-size: 28px;
+  }
+
+  .card-header {
+    height: 140px;
+    padding-top: 30px;
+  }
+
+  .card-body {
+    height: 160px;
+  }
+
+  .neumaticoImg {
+    max-width: 100%;
+  }
+
+  .card i {
+    font-size: 80px;
+  }
+
+  .djStyle {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .modulosDiv {
+    padding-bottom: 120px;
+  }
+  .card-body {
+    height: 140px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner h1 {
+    font-size: 72px;
+  }
+
+  .subStyle {
+    font-size: 52px;
+  }
+}

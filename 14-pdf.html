@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/pdf.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+
+    <title>Pdf</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="row logoMinContenedor">
+            <span class="ms-4"><img src="img/Grupo 984.svg" class="logoMin ms-5 py-3" alt="Logo ministerio"></span>
+        </div>
+        <hr>
+        <h3 id="titulo" class="text-center py-2">DECLARACIÓN JURADA DE CONTENIDO DE HIDROCARBUROS AROMÁTICOS REMANENTES
+            (DJHA)</h3>
+        <hr>
+
+        <div class="container pdfContainer">
+            <div id="headerPdf" class="row ms-1 pdfHead">
+                <div class="col-12 col-md-4 text-center"><span>Número de trámite:</span>2203DJHA08CE95</div>
+                <div class="col-12 col-md-4 text-center"><span>Aprobación:</span>08/03/2022</div>
+                <div class="col-12 col-md-4 text-center"><span>Vencimiento:</span>07/09/2022</div>
+            </div>
+
+
+            <h4>Datos del solicitante</h4>
+
+            <div class="row ms-1 pdfUser py-3">
+                <div class="col-12 marginleft"><span>Tipo de declarante</span> Importador</div>
+
+                <div class="col-4 marginleft"><span>Razón Social</span> Pirelli S.A.</div>
+                <div class="col-4 marginleft"><span>CUIT</span> 23-34456123-3</div>
+                <div class="col-4 marginleft"><span>RUMP</span> 123456789</div>
+
+                <h5 class="marginleft">Domicilio Real</h5>
+
+                <div class="col-4 marginleft"><span>Calle/Ruta/Camino - Nro/Km</span> Av. Monroe 3456</div>
+                <div class="col-4 marginleft"><span>Piso Nro</span> -</div>
+                <div class="col-4 marginleft"><span>Depto./Pieza</span> -</div>
+
+                <div class="col-4 marginleft"><span>C.P.</span> 1428</div>
+                <div class="col-4 marginleft"><span>Provincia</span> C.A.B.A.</div>
+                <div class="col-4 marginleft"><span>Localidad</span> C.A.B.A.</div>
+                <div class="col-12 marginleft"><span>Departamento/Partido/Comuna</span> Comuna V</div>
+
+                <h5 class="marginleft">Contacto</h5>
+
+                <div class="col-4 marginleft"><span>Teléfono</span> +54 11 45678979</div>
+                <div class="col-8 marginleft"><span>E-mail</span> plopez@pirelli.com</div>
+
+            </div>
+
+            <div class="row ms-1 pdfUser mt-4 py-3">
+                <h5 class="marginleft">Representante Legal</h5>
+
+                <div class="col-4"><span class="marginleft">Nombre y apellido</span> Pepe López</div>
+                <div class="col-8 ps-5"><span class="marginleft ps-2">DNI</span> 36465536</div>
+
+
+            </div>
+
+            <h4>Datos del producto</h4>
+
+            <div class="row ms-1 pdfProducto py-3">
+                <div class="col-12 marginleft"><span>Descripción del producto</span> Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Nulla quo delectus dolores modi quos quod.</div>
+
+                <h5 class="marginleft">Datos del Establecimiento Productivo</h5>
+
+                <div class="col-3 "><span class="marginleft">Razón Social</span> Pirelli Corporate</div>
+                <div class="col-6"><span class="marginleft ps-5">Identificación del Establecimiento Productivo</span>
+                    36465536</div>
+                <div class="col-3 "><span class="">Pais de origen</span> Italia</div>
+
+                <h5 class="marginleft">Producto</h5>
+
+                <div class="col-4 "><span class="marginleft">Marca</span> Pirelli Scorpion</div>
+                <div class="col-4 "><span class="marginleft">Modelo</span> All season SFS2</div>
+                <div class="col-4 "><span class="marginleft">NCM / SIM</span> 1401110001145</div>
+                <div class="col-12 "><span class="marginleft">Segmento</span> Neumáticos Livianos</div>
+
+                <div class="row pdfNeumatico">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-6"><img src="img/llanta_ancho.png" class="iconpixel marginleft" alt="">
+                                </div>
+                                <div class="col-6"><span>165</span><br> Ancho nominal de la banda <br> (en milimetros)
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6"><img src="img/llanta_diametro.png" class="iconpixel marginleft"
+                                        alt=""></div>
+                                <div class="col-6"><span>15</span><br> Diámetro interior del neumático (en pulgadas)
+                                </div>
+                            </div>
+
+                            <div class="marginleft"><span>R</span><br> Tipo de contrucción: <br> R Radial</div>
+
+                            <div class="row">
+                                <div class="col-6"><img src="img/llanta_peso.png" class="iconpixel marginleft" alt="">
+                                </div>
+                                <div class="col-6"><span>325</span><br> Capacidad de carga <br> (en kilos)</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6 fw-bold "><p class="marginleft">Diseño</p></div>
+                                <div class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Itaque, iste</div>
+                            </div>
+
+                            <div class="row marginleft">
+                                <div class="col-9 p-0 fw-bold">¿El producto cumple en su formulación
+                                    con el límite máximo de presencia de hidrocarburos aromáticos policíclicos de 0.35%
+                                    de los protones de concavidad?</div>
+                                <div class="col-3"><span class="ms-2">SI</span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="imagenContenedor" class="col-8 justify-content-center align-content-center align-items-center align-self-center">
+                        <img src="img/deniseimg.jpg" class="img-fluid img-iferez imgpixel bord" alt="Imagen producto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ms-1 pdfFooter mt-4 text-center">
+                <div class="col-12"><span>Código de aprobación:</span> 2203DJHA08CE95-07092022</div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

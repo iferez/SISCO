@@ -1,0 +1,302 @@
+@import "headerFooter.css";
+
+.container-main {
+  width: 100%;
+  margin: auto;
+  background: #f5f5f5;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner h1 {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: 2px 2px 6px #000000ad;
+}
+
+.subStyle {
+  font-size: 24px;
+}
+
+.infoAfip h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.infoAfip p {
+  font-size: 1rem;
+}
+
+.infoAfip h3 {
+  font-size: 1.8rem;
+}
+
+.imgAfip {
+  height: 50px;
+}
+
+.cajaImg {
+  margin-top: 10px;
+}
+
+.icono-boton {
+  padding-bottom: 30px;
+}
+
+/* INFO USUARIO */
+
+.infoUsuario{
+ padding-bottom: 30px;
+}
+
+.infoUsuario h2 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.infoUsuario label {
+  color: #707070;
+}
+
+.infoUsuario i{
+  cursor: pointer;
+}
+
+.btn-success {
+  letter-spacing: 1px !important;
+  font-weight: bold;
+  font-size: 16px !important;
+  background: #2f7d33;
+  padding: 10px 25px !important;
+}
+
+.btn-secondary {
+  letter-spacing: 1px !important;
+  font-weight: bold;
+  font-size: 16px !important;
+  background: #dbdbdb;
+  border: #a0a0a0;
+  color: #030303;
+  padding: 10px 25px !important;
+}
+
+.btn-ingreso {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #0072bb;
+  border: 2px solid #0072bb;
+  color: #ffff;
+  padding: 10px 40px;
+  transition: 0.5s;
+}
+
+.btn-ingreso:hover {
+  color: #0072bb;
+  background-color: #ffff;
+
+}
+
+.invalid-feedback {
+  color: #c42020;
+}
+
+.blueStyle {
+  color: #1072bb !important;
+  font-weight: bold;
+}
+
+.alert-danger {
+  background-color: #c4202021 !important;
+  color: #5a5a5a !important;
+  border: #c42020;
+}
+
+.alert-danger p {
+  margin: 0px;
+}
+
+/*RECUPERAR PW*/
+
+.correoContenido{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.correoContenido h3{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-correo{
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #F5F5F5;
+  color: #0072bb;
+  padding: 10px 40px;
+  border: 2px solid #0072bb;
+  transition: 0.5s;
+}
+
+.btn-correo:hover{
+  color: #f5f5f5;
+  background-color: #0072bb;
+  border: 2px solid #0072bb;
+}
+
+@media (min-width: 575px) {
+
+  .infoAfip h2 {
+    font-size: 2.1rem;
+  }
+
+  .infoAfip p {
+    font-size: 1.3rem;
+  }
+
+  .infoAfip h3 {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  .subStyle {
+    font-size: 32px;
+  }
+
+}
+
+@media (min-width: 791px) {
+
+  .infoAfip h2 {
+    padding-top: 20px;
+  }
+
+  .infoUsuario h2 {
+    font-size: 26px;
+  }
+
+  .cajaImg {
+    height: 80px;
+    margin-top: 30px;
+  }
+
+  .icono-boton {
+    padding-bottom: 90px;
+  }
+
+  .claveFiscal{
+    font-size: 20px;
+  }
+
+  .infoUsuario{
+    padding-top: 30px;
+    padding-bottom: 40px;
+   }
+
+  .correoContenido h3{
+    font-size: 26px;
+  }
+
+  .correoContenido{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infoAfip h2 {
+    padding-top: 20px;
+  }
+
+  .btn-ingreso {
+    font-size: 1.1rem;
+  }
+
+  .infoUsuario label {
+    font-size: 18px;
+  }
+
+  .infoUsuario h2 {
+    font-size: 32px;
+  }
+
+  .btn-success {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .btn-secondary {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .correoContenido h3{
+    font-size: 32px;
+  }
+
+  .correoContenido p{
+    font-size: 20px;
+  }
+
+  .btn-correo{
+    font-size: 20px;
+
+  }
+
+  .correoContenido{
+    padding-top: 100px;
+    height: 50vh;
+  }
+
+}
+
+@media (min-width: 1199px) {
+  .banner h1 {
+    font-size: 62px;
+  }
+
+  .subStyle {
+    font-size: 42px;
+  }
+
+  .infoAfip h2 {
+    font-size: 40px;
+    padding-top: 20px;
+  }
+
+  .infoAfip p {
+    font-size: 22px;
+  }
+
+  .infoUsuario{
+    padding-top: 20px;
+    padding-bottom: 80px;
+   }
+
+}
+
+@media (min-width: 1600px) {
+  .banner h1 {
+    font-size: 72px;
+  }
+
+  .subStyle {
+    font-size: 52px;
+  }
+
+}

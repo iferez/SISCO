@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- CSS / FONTAWESOME -->
+
+    <link rel="stylesheet" href="css/declaracion.css" />
+
+    <script src="https://kit.fontawesome.com/534893fe33.js" crossorigin="anonymous"></script>
+
+    <title>DJHA</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container-fluid" id="header-ministerioDesarrollo">
+            <div class="row">
+                <div class="col-3 text-sm-end">
+                    <img src="img/Grupo984w.svg" alt="Logo Ministerio" />
+                </div>
+
+                <div class="col-6 d-flex justify-content-center siscoHeader">
+                    <h1 class="d-none d-lg-block ps-3">SISCO - <span>Neumáticos</span></h1>
+                </div>
+
+                <div class="col-3 d-flex justify-content-center align-self-center mt-4 usuarioMenu">
+                    <button class="btn btn-user rounded-pill" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MENU LATERAL -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="pe-2" id="offcanvasRightLabel">Nombre Usuario</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <hr>
+                    <a href="">
+                        <p><i class="fas fa-id-card"></i> Mi perfil</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fas fa-building"></i> Gestionar empresas</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fas fa-file-alt"></i> Mas acciones</p>
+                    </a>
+                    <hr>
+                    <a href="">
+                        <p><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</p>
+                    </a>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="container declaracionContainer">
+            <h2 id="lola">DJHA Neumáticos</h2>
+
+            <h3 class="mt-3 mb-5">Nueva DJHA</h3>
+
+
+
+            <!-- FORMULARIO -->
+
+            <div class="row declaracionContenido">
+                <form class="row g-3 needs-validation" id="djhaForm">
+
+                    <h4 class="fw-bold pb-3">Datos del solicitante</h4>
+
+                    <div class="col-12 pb-2">
+                        <label for="tipoDeclarante-djha" class="form-label">Tipo de declarante *</label>
+                        <div class="form-check form-check-inline ms-5">
+                            <input class="form-check-input" type="radio" name="tipoDeclarante" id="declaranteNacional"
+                                value="option1" onclick="alertaChecked()">
+                            <label class="form-check-label" for="inlineRadio1">Fabricante nacional</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipoDeclarante" id="declaranteImportador"
+                                value="option2" onclick="alertaCheckedDos()">
+                            <label class="form-check-label" for="inlineRadio2">Importador</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <label for="razonSocial-djha" class="form-label">Razón social *</label>
+                        <input type="text" class="form-control" id="razonSocial-djha" required>
+                        <div class="invalid-feedback">
+                            Verifica tu Razón social
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="cuitEmpresa-djha" class="form-label">CUIT *</label>
+                        <div class="input-group has-validation">
+                            <input type="number" class="form-control" id="cuitEmpresa-djha" required>
+                            <div class="invalid-feedback">
+                                Verifica tu CUIT
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="rump-djha" class="form-label">RUMP *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="rump-djha" required>
+                            <div class="invalid-feedback">
+                                Verifica tu RUMP
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DOMICILIO REAL -->
+
+                    <h5 class="py-4">Domicilio real</h5>
+
+                    <div class="col-12">
+                        <label for="calle-djha" class="form-label">Calle *</label>
+                        <input type="text" class="form-control" id="calle-djha" required>
+                        <div class="invalid-feedback">
+                            Ingresá una calle para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="altura-djhaa" class="form-label">Altura *</label>
+                        <input type="text" class="form-control" id="altura-djha" required>
+                        <div class="invalid-feedback">
+                            Ingresá una altura para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="piso-djha" class="form-label">Piso</label>
+                        <input type="text" class="form-control" id="piso-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un piso para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="depto-djha" class="form-label">Depto.</label>
+                        <input type="text" class="form-control" id="depto-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un departamento para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="codigoPostal-djha" class="form-label">C.P *</label>
+                        <input type="text" class="form-control" id="codigoPostal-djha" required>
+                        <div class="invalid-feedback">
+                            Ingresá un codigo postal para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="pais-djha" class="form-label">Provincia *</label>
+                            <select name="pais-djha" id="pais-djha" class="form-select" required>
+                                <option value="">Seleccioná una provincia</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="localidad-djha" class="form-label">Localidad *</label>
+                            <select name="localidad-djha" id="localidad-djha" class="form-select" required>
+                                <option value="">Seleccioná una localidad</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="municipio-djha" class="form-label">Municipio *</label>
+                            <select name="municipio-djha" id="municipio-djha" class="form-select" required>
+                                <option value="">Seleccioná un municipio</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <!-- DOMICILIO ESPECIAL -->
+
+                    <h5 class="py-4">Domicilio especial</h5>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="tipo-djha" class="form-label">Tipo</label>
+                            <select name="" id="tipo-djha" class="form-select">
+                                <option value="">Seleccioná un tipo</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="calleEsp-djha" class="form-label">Calle</label>
+                        <input type="text" class="form-control" id="calleEsp-djha" required>
+                        <div class="invalid-feedback">
+                            Ingresá una calle para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="alturaEsp-djhaa" class="form-label">Altura</label>
+                        <input type="text" class="form-control" id="alturaEsp-djha">
+                        <div class="invalid-feedback">
+                            Ingresá una altura para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="pisoEsp-djha" class="form-label">Piso</label>
+                        <input type="text" class="form-control" id="pisoEsp-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un piso para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="deptoEsp-djha" class="form-label">Depto.</label>
+                        <input type="text" class="form-control" id="deptoEsp-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un departamento para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="codigoPostalEsp-djha" class="form-label">C.P</label>
+                        <input type="text" class="form-control" id="codigoPostalEsp-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un codigo postal para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="paisEsp-djha" class="form-label">Provincia</label>
+                            <select name="paisEsp-djha" id="paisEsp-djha" class="form-select">
+                                <option value="">Seleccioná una provincia</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="localidadEsp-djha" class="form-label">Localidad</label>
+                            <select name="localidadEsp-djha" id="localidadEsp-djha" class="form-select">
+                                <option value="">Seleccioná una localidad</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="municipioEsp-djha" class="form-label">Municipio</label>
+                            <select name="municipioEsp-djha" id="municipioEsp-djha" class="form-select">
+                                <option value="">Seleccioná un municipio</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <!-- CONTACTO -->
+
+                    <h5 class="pt-4 pb-2">Contacto</h5>
+
+                    <div class="col-6">
+                        <label for="tel-djha" class="form-label">Teléfono *</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="tel-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un teléfono valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="mail-djha" class="form-label">E-mail *</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="mail-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un correo electronico
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="py-2">Representante legal</h5>
+
+                    <div class="col-6">
+                        <label for="representanteNombre-djha" class="form-label">Nombre y Apellido</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="representanteNombre-djha">
+                            <div class="invalid-feedback">
+                                Ingresa un nombre y apellido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="representanteDni-djha" class="form-label">DNI</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="representanteDni-djha">
+                            <div class="invalid-feedback">
+                                Ingresa un DNI
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- DATOS DEL PRODUCTO -->
+
+                    <h4 class="py-4">Datos del producto</h4>
+
+                    <div class="col-12">
+                        <label for="productoFile-djha" class="form-label">Descripción del producto</label>
+                        <div>
+                            <input type="file" multiple class="form-control" aria-label="file example"
+                                id="productoFile-djha">
+                            <div class="invalid-feedback">Porfavor ingrese documentación valida</div>
+                        </div>
+
+                        <button type="button" class="btn mt-3 btn-masInfo" data-bs-container="body"
+                            data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom"
+                            title="Requerimientos"
+                            data-bs-content="Los documentos deben ser menores que 2MB. Tipos de archivos permitidos: .jpg .jpeg .png .doc .pdf">
+                            <i class="fas fa-question-circle"></i> Más información
+                        </button>
+                    </div>
+
+                    <h5 class="pb-2">Establecimiento productivo</h5>
+
+                    <div class="col-12">
+                        <label for="epRazon-djha" class="form-label">Razón social *</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="epRazon-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa una Razón social valida
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="epIdentificacion-djha" class="form-label">N° de Identificación del Establecimiento
+                            Productivo *</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="epIdentificacion-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un Número de Identificación valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="epExpediente-djha" class="form-label">Número de expediente *</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="epExpediente-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un Número de expediente valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="epPais-djha" class="form-label">Pais *</label>
+                            <select name="epPais-djha" id="epPais-djha" class="form-select" required>
+                                <option value="">Seleccioná un pais</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="epRegion-djha" class="form-label">Región / Provincia *</label>
+                            <select name="epRegion-djha" id="epRegion-djha" class="form-select" required>
+                                <option value="">Seleccioná una Región/Provincia</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="epCalle-djha" class="form-label">Domicilio real *</label>
+                        <input type="text" class="form-control" id="epCalle-djha" placeholder="Calle" required>
+                        <div class="invalid-feedback">
+                            Ingresá una calle para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="epAltura-djhaa" class="form-label">Altura *</label>
+                        <input type="text" class="form-control" id="epAltura-djha">
+                        <div class="invalid-feedback">
+                            Ingresá una altura para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="epPiso-djha" class="form-label">Piso</label>
+                        <input type="text" class="form-control" id="epPiso-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un piso para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="epDepto-djha" class="form-label">Depto.</label>
+                        <input type="text" class="form-control" id="epDepto-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un departamento para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="epPostal-djha" class="form-label">C.P *</label>
+                        <input type="text" class="form-control" id="epPostal-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un codigo postal para tu dirección
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTO ESPECIFICACIONES -->
+
+                    <h5>Producto</h5>
+
+                    <div class="col-md-6">
+                        <label for="marca-djha" class="form-label">Marca *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="marca-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa una Marca
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="modelo-djha" class="form-label">Modelo *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="modelo-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un segmento valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group item-form">
+                            <label for="ncm-djha" class="form-label">NCM/SIM *</label>
+                            <select name="ncm-djha" id="ncm-djha" class="form-select" required>
+                                <option value="">Seleccioná NCM/SIM</option>
+                                <option value="1">xxxxx</option>
+                                <option value="2">xxxxxx</option>
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <label for="segmento-djha" class="form-label">Segmento *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="segmento-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un segmento valido
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <label for="nominal-djha" class="form-label">Ancho Nominal de la Banda (en
+                            milímetros) *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="nominal-djha" required>
+                            <div class="invalid-feedback">
+                                El valor introducido se encuentra fuera del rango admitido para este producto
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tipoConstruccion-djha" class="form-label">Tipo de construcción *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="tipoConstruccion-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un tipo de construcción valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="diametro-djha" class="form-label">Diámetro interior del neumático (en
+                            pulgadas) *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="diametro-djha" required>
+                            <div class="invalid-feedback">
+                                El valor introducido se encuentra fuera del rango admitido para este producto
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="carga-djha" class="form-label">Capacidad de carga (en kilos) *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="carga-djha" required>
+                            <div class="invalid-feedback">
+                                El valor introducido se encuentra fuera del rango admitido para este producto
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="disenio-djha" class="form-label">Diseño *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="disenio-djha" required>
+                            <div class="invalid-feedback">
+                                Ingresa un Diseño valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="depositoCalle-djha" class="form-label">Domicilio del depósito</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="depositoCalle-djha" placeholder="Calle">
+                            <div class="invalid-feedback">
+                                Ingresa un Domicilio valido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="depositoAltura-djhaa" class="form-label">Altura</label>
+                        <input type="text" class="form-control" id="depositoAltura-djha">
+                        <div class="invalid-feedback">
+                            Ingresá una altura para tu dirección de deposito
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="depositoPiso-djha" class="form-label">Piso</label>
+                        <input type="text" class="form-control" id="depositoPiso-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un piso para tu dirección de deposito
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="depositoDepto-djha" class="form-label">Depto.</label>
+                        <input type="text" class="form-control" id="depositoDepto-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un departamento para tu dirección de deposito
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <label for="depositoCp-djha" class="form-label">C.P</label>
+                        <input type="text" class="form-control" id="depositoCp-djha">
+                        <div class="invalid-feedback">
+                            Ingresá un codigo postal para tu dirección de deposito
+                        </div>
+                    </div>
+
+                    <!-- Hidrocarburos aromáticos -->
+
+                    <div class="col-12 mt-5 mb-4">
+                        <label for="validationCondicion-djha" class="form-label">¿El producto cumple en su formulación
+                            con un/el límite máximo de presencia de hidrocarburos aromáticos policíclicos de 0.35% de
+                            los protones de concavidad? </label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="validationCondicion-djha"
+                                    id="formulacionSi-djha" value="option1" required>
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="validationCondicion-djha"
+                                    id="formulacionDos-djha" value="option2" data-bs-container="body"
+                                    data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom"
+                                    title="Incumplimiento"
+                                    data-bs-content="No se encuentra autorizada la comercialización del producto en el mercado nacional, la DJHA no podra ser aceptada.">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="validationDocumentacion-djha" class="form-label">Adjuntar documentación
+                            alternativa</label>
+                        <div>
+                            <input type="file" multiple class="form-control" aria-label="file example"
+                                id="validationDocumentacion-djha">
+                            <div class="invalid-feedback">Porfavor ingrese documentación valida</div>
+                        </div>
+
+                        <button type="button" class="btn mt-3 btn-masInfo" data-bs-container="body"
+                            data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom"
+                            title="Requerimientos"
+                            data-bs-content="Los documentos deben ser menores que 10MB. Tipos de archivos permitidos: .PDF .DOC">
+                            <i class="fas fa-question-circle"></i> Más información
+                        </button>
+                    </div>
+
+                    <!-- VISTA SOLO BACKOFFICE -->
+                    <section class="backofficeForm">
+
+                        <hr>
+                        <div class="col-md-6 col-lg-4 my-4">
+                            <label for="validationCambioEstado-djha" class="form-label">Estado de la DJHA *</label>
+                            <select class="form-select" aria-label="Asignar estado" id="validationCambioEstado-djha">
+                                <option selected>Asignar estado</option>
+                                <option value="1">Analisis</option>
+                                <option value="2">Aprobada</option>
+                                <option value="3">Archivada</option>
+                                <option value="4">Desistida</option>
+                                <option value="5">Rechazada</option>
+                                <option value="6">Requiere documentación</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="validationMotivo-djha" class="form-label">Motivo del cambio *</label>
+                            <textarea class="form-control" id="validationMotivo-djha" rows="6"></textarea>
+                        </div>
+                    </section>
+                    <!-- VISTA SOLO BACKOFFICE FIN
+                      BOTONES SUBMIT  -->
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary fw-bold my-4 rounded-pill">
+                                Cancelar
+                            </button>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success fw-bold my-4 rounded-pill">
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+           
+            </div>
+
+            <!-- 
+            <button type="submit" class="btn btn-success fw-bold my-4  rounded-pill" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Guardar
+        </button>  -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-check-circle"></i>
+                                La nueva DJHA fue ingresada con éxito</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ¿ Estás seguro de que deseas dar de alta la DJHA ingresada?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancelarModal rounded-pill"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-confirmarModal rounded-pill">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+    <footer class="info-footer">
+        <div class="container-fluid" id="footer-ministerioDesarrollo">
+            <div class="row">
+                <div class="col-sm-4 ps-sm-3 text-sm-center">
+                    <img src="img/Grupo984w.svg" alt="" />
+                </div>
+                <div class="info-footer offset-sm-5 col-sm-3">
+                    <div class="terminos-footer">
+                        <a href="" class="text-decoration-none text-light">
+                            <p>Acerca de este sitio</p>
+                        </a>
+                        <a href="" class="text-decoration-none text-light">
+                            <p>Términos y condiciones</p>
+                        </a>
+                        <a href="" class="text-decoration-none text-light">
+                            <p>Ministerio</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/funciones.js"></script>
+
+    <script> 
+        function alertaChecked(){ 
+               console.log("HOLAAAAAAAAAAA")
+               document.getElementById("lola").classList.remove("random");
+               document.getElementById("lola").classList.remove("random2");
+               document.getElementById("lola").classList.add("random");
+          
+        } 
+        function alertaCheckedDos(){ 
+            console.log("CHAAAAAAAAAAU")
+            document.getElementById("lola").classList.remove("random");
+               document.getElementById("lola").classList.remove("random2");
+               document.getElementById("lola").classList.add("random2");
+        } 
+
+        </script> 
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+/*  TABLA CSS  */
+
+table {
+    border-spacing: 0px 10px !important;
+    border-collapse: separate !important;
+    padding: 0 !important;
+}
+
+.table-style {
+    white-space: nowrap;
+}
+
+thead td {
+    font-weight: bold;
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+}
+
+.table-style td {
+    text-align: center;
+    font-size: 18px !important;
+    padding-top: 14px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.table-style .numeracion {
+    text-align: center;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #ffff !important;
+    width: 10px !important;
+    height: 60px !important;
+    padding: 10px 6px !important;
+    border: 1px solid #e1e1e1;
+}
+
+.celesteTd {
+    background-color: #2cb9ee !important;
+}
+
+.amarilloTd {
+    background-color: #f9a822 !important;
+}
+
+.verdeTd {
+    background-color: #2e7d33 !important;
+}
+
+.rojoTd {
+    background-color: #c62828 !important;
+}
+
+.table-style .borde-right {
+    border-right: 1px solid #e1e1e1 !important;
+    padding: 10px 8px 8px 8px !important;
+}
+
+.table-style .numeracion-lista {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffff;
+    background: #2cb9ee;
+    margin-right: 15px;
+}
+
+/*    BOTONES    */
+
+.btn-search {
+    background: #0072bb !important;
+}
+
+.table-style i {
+    font-size: 20px;
+    padding-top: 10px;
+    color: #0072bb;
+    cursor: pointer;
+}
+
+.table-style .btn-solicitud {
+    background-color: #0072bb !important;
+    color: #ffff !important;
+    padding-top: 0px !important;
+}
+
+.btn-solicitud-span {
+    font-size: 16px !important;
+
+}
+
+.btn-solicitud-span i {
+    font-size: 16px !important;
+    margin-right: 6px;
+}
+
+.table-style .btn-solicitud:hover {
+    background-color: #0073bbda !important;
+}
+
+.table-style i:hover {
+    color: #0073bbd5;
+}
+
+/*ALERTAS */
+
+.alert-success {
+    background-color: #F2FAF3 !important;
+    color: #333333 !important;
+}
+
+
+/* AMB BACKOFFICE Y NUEVA EMPRESA */
+
+.container-usuarios h2,
+h3 {
+    font-weight: bold;
+}
+
+.abm-style h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table-abm {
+    white-space: nowrap;
+}
+
+.btn-nuevaEmpresa {
+    background-color: #2e7d33 !important;
+    color: #ffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-nuevaEmpresa:hover {
+    background-color: #296b2c !important;
+    color: #ffff;
+}
+
+.btn-nuevoUsuario {
+    background-color: #1072bb !important;
+    color: #ffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-nuevoUsuario:hover {
+    background-color: #1071bbd7 !important;
+    color: #ffff;
+}
+
+#vacioTh {
+    visibility: hidden;
+}
+
+.table-abm td {
+    border-top: 1px solid #a7a7a74b !important;
+}
+
+.table-abm i {
+    color: #0072bb;
+    cursor: pointer;
+}
+
+.table-abm .form-switch .form-check-input {
+    cursor: pointer;
+}
+
+.table-abm .form-switch .form-check-input:checked {
+    background-color: #33b560 !important;
+    border-color: #2e7d33;
+}
+
+.cuitCeleste {
+    border-left: 6px solid #2cb9ee !important;
+}
+
+.cuitGris {
+    border-left: 6px solid #707070 !important;
+}
+
+.cuitAmarillo {
+    border-left: 6px solid #f9a822 !important;
+}
+
+.cuitVerde {
+    border-left: 6px solid #2e7d33 !important;
+}
+
+.cuitRojo {
+    border-left: 6px solid #c62828 !important;
+}
+
+.pagination {
+    margin-top: 20px !important;
+}
+
+
+
+@media (min-width: 768px) {
+
+    .abm-style h3 {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 996px) {
+    .abm-style h3 {
+        font-size: 30px;
+    }
+
+    .btn-nuevaEmpresa {
+        font-size: 18px;
+        height: 46px !important;
+    }
+
+    .btn-nuevoUsuario {
+        font-size: 18px;
+        height: 46px !important;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    .table-abm {
+        font-size: 18px;
+    }
+
+}

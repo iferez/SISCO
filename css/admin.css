@@ -1,0 +1,158 @@
+@import "headerFooter.css";
+
+.container-admin h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container-admin h3 {
+  font-size: 24px;
+}
+
+#panelAdmin {
+  background-color: #f5f5f5;
+}
+
+#panelAdmin .circuloAdm {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#panelAdmin .circuloAdm:hover {
+  opacity: 80%;
+}
+
+#panelAdmin .seguridadBg {
+  background-color: #d3d93b;
+}
+
+#panelAdmin .seguridadText {
+  color: #d3d93b;
+  font-weight: bold;
+}
+
+#panelAdmin .datosBg {
+  background-color: #9488bf;
+}
+
+#panelAdmin .datosText {
+  color: #9488bf;
+  font-weight: bold;
+}
+
+#panelAdmin .listasBg {
+  background-color: #f29422;
+}
+
+#panelAdmin .listasText {
+  color: #f29422;
+  font-weight: bold;
+}
+
+#panelAdmin .reportesBg {
+  background-color: #038c8c;
+}
+
+#panelAdmin .reportesText {
+  color: #038c8c;
+  font-weight: bold;
+}
+
+.iconoContenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#panelAdmin i {
+  font-size: 60px;
+  color: #ffff;
+}
+
+#panelAdmin p {
+  font-size: 20px;
+}
+
+/*NAV ADMIN*/
+
+.navAdmin {
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  font-size: 18px !important;
+}
+
+.btn-adminVerde {
+  background-color: #2e7d33 !important;
+  color: #ffff;
+  font-size: 16px !important;
+  font-weight: bold;
+  letter-spacing: 1px !important;
+  padding: 10px 30px !important;
+  border-radius: 10px;
+}
+
+.btn-adminVerde:hover {
+  background-color: #296b2c !important;
+  color: #ffff;
+}
+
+.container-usuarios {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .container-admin {
+    padding-top: 40px;
+    padding-bottom: 300px;
+  }
+}
+
+@media (min-width: 996px) {
+  .container-admin h2 {
+    font-size: 42px;
+  }
+
+  .container-admin h3 {
+    font-size: 32px;
+  }
+
+  #panelAdmin .circuloAdm {
+    width: 150px;
+    height: 150px;
+  }
+
+  #panelAdmin i {
+    font-size: 90px;
+  }
+
+  #panelAdmin p {
+    font-size: 24px;
+  }
+
+  .container-usuarios {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .btn-adminVerde {
+    font-size: 18px !important;
+    padding: 10px 40px !important;
+
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .container-admin {
+    padding-top: 40px;
+    padding-bottom: 200px;
+  }
+}

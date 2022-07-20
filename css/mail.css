@@ -1,0 +1,56 @@
+@import "headerFooter.css";
+
+
+
+.mailStyle .bg-gris{
+  background-color: #E1E1E16B !important;
+}
+.mailStyle .btn-success {
+  letter-spacing: 1px !important;
+  font-size: 22px !important;
+  background: #2f7d33 !important;
+  padding: 15px 40px !important;
+}
+
+.mailStyle h3{
+  color: #707070;
+}
+.mailStyle a{
+  color: #0072BB !important;
+  text-decoration: none !important;
+}
+
+.mailStyle .fa-check-circle {
+  color: #2e7d33;
+  font-size: 18px;
+  padding-right: 6px;
+}
+
+.mailStyle .fa-exclamation-triangle{
+  font-size: 36px;
+  color: #FFA834;
+  font-size: 18px;
+  padding-right: 6px;
+
+}
+
+
+
+@media (min-width: 990px) {
+
+  .mail{
+    padding: 50px 100px !important;
+  }
+ .mailStyle .fa-check-circle {
+    font-size: 36px;
+  }
+  .mailStyle p{
+    font-size: 20px;
+  }
+
+  .mailStyle .fa-exclamation-triangle{
+    font-size: 36px;
+
+  }
+
+}

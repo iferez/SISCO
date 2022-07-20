@@ -1,0 +1,219 @@
+@import "headerFooter.css";
+
+.random{
+  background-color: #1072bb;
+  color: red;
+}
+
+.random2{
+  background-color: #73db1d;
+  color: #1072bb;
+}
+
+
+.declaracionContainer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.declaracionContainer h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.declaracionContainer h3 {
+  font-size: 22px;
+}
+
+.declaracionContainer h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.declaracionContainer h5 {
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.declaracionContenido label {
+    color: #707070;
+    font-weight: bold;
+  }
+
+  .codigo-label{
+    font-size: 16px;
+  }
+  .codigo-area{
+    color: #1072bb;
+    text-decoration:underline;
+  }
+
+/* BOTONES */
+
+.declaracionContainer .btn-success {
+  letter-spacing: 1px !important;
+  font-weight: bold;
+  font-size: 16px !important;
+  background: #2f7d33;
+  padding: 10px 25px !important;
+}
+
+.declaracionContainer .btn-secondary {
+  letter-spacing: 1px !important;
+  font-weight: bold;
+  font-size: 16px !important;
+  background: #dbdbdb;
+  border: #a0a0a0;
+  color: #030303;
+  padding: 10px 25px !important;
+}
+
+.declaracionContainer .btn-masInfo {
+  font-weight: bold;
+  font-size: 16px !important;
+  color: #1072bb !important;
+  padding: 0px !important;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+/*MODAL*/
+
+.modal-header {
+  border: none !important;
+}
+.modal-footer {
+  border: none !important;
+}
+
+.btn-cancelarModal {
+  color: #333333 !important;
+  letter-spacing: 1px !important;
+  background-color: #dddddd !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 10px 20px !important;
+  margin-right: 40px !important;
+}
+
+.btn-confirmarModal {
+  color: #ffff !important;
+  letter-spacing: 1px !important;
+  background-color: #2e7d33 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 10px 20px !important;
+}
+
+.fa-check-circle {
+  color: #2e7d33;
+  font-size: 18px;
+  padding-right: 6px;
+}
+
+
+
+@media (min-width: 768px) {
+  .declaracionContainer {
+    padding-top: 100px;
+    padding-bottom: 250px;
+  }
+
+  .declaracionContenido input{
+      margin-bottom: 10px;
+  }
+  .declaracionContenido select{
+    margin-bottom: 10px;
+}
+}
+
+@media (min-width: 992px) {
+  .declaracionContainer {
+    padding-top: 80px;
+    padding-bottom: 110px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .declaracionContainer h2 {
+    font-size: 46px;
+  }
+
+  .declaracionContainer h3 {
+    font-size: 34px;
+  }
+
+  .declaracionContainer h4 {
+    font-size: 32px;
+  }
+
+  .declaracionContainer h5 {
+    font-size: 24px;
+  }
+
+  .declaracionContenido label {
+    font-size: 18px;
+  }
+
+  .declaracionContainer .btn-success {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .declaracionContainer .btn-secondary {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+
+  /* MODAL */
+
+  .btn-cancelarModal {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .btn-confirmarModal {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .fa-check-circle {
+    font-size: 30px;
+  }
+
+  .modal-content {
+    border-radius: 20px !important;
+  }
+
+  .btn-close {
+    margin-right: 20px !important;
+    margin-bottom: 40px !important;
+  }
+  .modal-title {
+    padding: 80px 40px 0px 40px !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+  }
+  .modal-body {
+    font-size: 22px !important;
+    padding: 20px 40px !important;
+  }
+  .modal-footer {
+    font-size: 22px !important;
+    padding: 40px !important;
+  }
+
+
+}
+
+
+@media (min-width: 1320px) {
+  .declaracionContainer {
+    width: 50%;
+    margin: auto;
+  }
+}

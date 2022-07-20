@@ -1,0 +1,240 @@
+@import "headerFooter.css";
+
+.neumaticosInicio h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.eleccionEmpresa {
+  background-color: #fdeaa2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.eleccionEmpresa h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* RECLAMO DASH */
+
+ul {
+  padding-left: 0px;
+}
+
+.li-style li {
+  color: #2cb9ee;
+  font-size: 16px;
+  list-style: none;
+}
+
+.reclamoImg {
+  z-index: 1;
+}
+
+.reclamoImg img {
+  width: 130px;
+}
+
+.reclamoImgResponsive {
+  width: 70px;
+  margin-left: 60px;
+}
+
+.bg-reclamo {
+  background-color: #f2f2f2;
+}
+
+.numeracion-lista {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffff;
+  background: #2cb9ee;
+  margin-right: 10px;
+  padding-top: 4px;
+}
+
+.info p {
+  font-size: 16px;
+}
+
+.info h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.info img {
+  max-width: 100px;
+}
+
+.info .btn-success {
+  background-color: #2e7d33 !important;
+  font-size: 16px !important;
+  letter-spacing: 1px !important;
+  padding: 10px 30px !important;
+  border-radius: 10px;
+}
+
+.info .btn-success:hover {
+  background-color: #296b2c !important;
+}
+
+/* BUSCADOR FILTROS */
+.abm-style h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buscador-style select {
+  height: 46px !important;
+}
+
+.infoEstado {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px !important;
+  color: #1072bb !important;
+}
+
+/*MODAL*/
+.modal-header {
+  border: none !important;
+}
+
+.modal-footer {
+  border: none !important;
+}
+
+.btn-cancelarModal {
+  color: #333333 !important;
+  letter-spacing: 1px !important;
+  background-color: #dddddd !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 10px 20px !important;
+  margin-right: 40px !important;
+}
+
+.btn-confirmarModal {
+  color: #ffff !important;
+  letter-spacing: 1px !important;
+  background-color: #2e7d33 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 10px 20px !important;
+}
+
+.fa-check-circle {
+  color: #2e7d33;
+  font-size: 18px;
+  padding-right: 6px;
+}
+
+@media (min-width: 768px) {
+  .container-neumaticos {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .neumaticosInicio h2 {
+    font-size: 32px;
+  }
+
+  .info h4 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 996px) {
+  .container-neumaticos {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .neumaticosInicio h2 {
+    font-size: 42px;
+  }
+
+  .neumaticosInicio p {
+    font-size: 20px;
+  }
+
+  .eleccionEmpresa h3 {
+    font-size: 26px;
+  }
+
+  .info h4 {
+    font-size: 32px;
+  }
+
+  .info p {
+    font-size: 20px;
+  }
+
+  .info li {
+    font-size: 20px;
+  }
+
+  .info .btn-success {
+    font-size: 20px !important;
+  }
+
+  .indexImg img {
+    width: 111px;
+  }
+
+  .numeracion {
+    font-size: 28px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /*MODAL*/
+
+  .btn-cancelarModal {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .btn-confirmarModal {
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+  }
+
+  .fa-check-circle {
+    font-size: 30px;
+  }
+
+  .modal-content {
+    border-radius: 20px !important;
+  }
+
+  .btn-close {
+    margin-right: 20px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .modal-title {
+    padding: 80px 40px 0px 40px !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+  }
+
+  .modal-body {
+    font-size: 22px !important;
+    padding: 20px 40px !important;
+  }
+
+  .modal-footer {
+    font-size: 22px !important;
+    padding: 40px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  
+}

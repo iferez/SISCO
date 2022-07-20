@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/pdf.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+
+    <title>Pdf</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="row logoMinContenedor">
+            <span class="ms-4"><img src="http://localhost/img/logoMinisterioNeg.svg" class="logoMin py-3" alt="Logo ministerio"></span>
+        </div>
+        <hr>
+        <h3 id="titulo" class="text-center py-2">DECLARACIÓN JURADA DE CONTENIDO DE HIDROCARBUROS AROMÁTICOS REMANENTES
+            (DJHA)</h3>
+        <hr>
+
+        <div class="container pdfContainer">
+            <div id="headerPdf" class="row ms-1 pdfHead">
+                <div class="col-12 col-md-4"><span>Número de trámite:</span>{{$ddjj->numero}}</div>
+                @if($ddjj->estado == 'Aprobada')
+                @php
+                {{
+                        $date_arg=date_format($ddjj->created_at, 'd-m-Y');
+                        $date_arg=str_replace("-"," ",$date_arg);
+                        $date_arg=str_replace(" ", "/",$date_arg);
+                      }}
+                @endphp
+                <div class="col-12 col-md-4"><span>Fecha de aprobación:</span>{{ $date_arg }}</div>
+                @if($ddjj->vencimiento)
+                <div class="col-12 col-md-4"><span>Vencimiento:</span>{{ $ddjj->vencimiento }}</div>
+                @endif
+                @else
+                @php
+                {{
+                            $date_created=date_format($ddjj->created_at, 'd-m-Y'); 
+                            $date_created=str_replace("-","/",$date_created);
+                        }}
+                @endphp
+                <div class="row pdfFooter mt-4">
+                    <div class="col-12-md-4"><span>Fecha de creación:</span> {{$date_created}}</div>
+                </div>
+                @endif
+            </div>
+
+
+            <h4>Datos del solicitante</h4>
+
+            <div class="row ms-1 pdfUser py-3">
+                @if($ddjj->importador)
+                <div class="col-12 marginleft"> <span>Tipo de declarante</span> Importador</div>
+                @else
+                <div class="col-12"> <span>Tipo de declarante</span> Fabricante Nacional</div>
+                @endif
+                <div class="col-4 marginleft"><span>Razón Social</span>{{$empresa['razon_social']}}</div>
+                <div class="col-4 marginleft"><span>CUIT</span>{{$empresa['cuit']}}</div>
+                <div class="col-4 marginleft"><span>RUMP</span>{{$empresa['rump']}}</div>
+
+                <h5 class="marginleft">Domicilio Real</h5>
+
+                <div class="col-4 marginleft"><span>Calle/Ruta/Camino - Nro/Km</span> {{$direccion->calle .' '. $direccion->altura}}</div>
+                <div class="col-4 marginleft"><span>Piso Nro</span> {{$direccion->piso}}</div>
+                <div class="col-4 marginleft"><span>Depto./Pieza</span> {{$direccion->depto}}</div>
+
+                <div class="col-4 marginleft"><span>C.P.</span> {{$direccion->cpa}}</div>
+                <div class="col-4 marginleft"><span>Provincia</span> {{$direccion->provincia}}</div>
+                <div class="col-4 marginleft"><span>Localidad</span> {{$direccion->localidad}}</div>
+
+                <h5 class="marginleft">Contacto</h5>
+
+                <div class="col-4 marginleft"><span>Teléfono</span> {{$ddjj->empresa->telefono->cod_area.$ddjj->empresa->telefono->num_tel}}</div>
+                <div class="col-8 marginleft"><span>E-mail</span> {{$ddjj->empresa->email->correo}}</div>
+
+            </div>
+
+            <div class="row ms-1 pdfUser mt-4 py-3">
+                <h5 class="marginleft">Representante Legal</h5>
+
+                <div class="col-4"><span class="marginleft">Nombre y apellido</span> {{$ddjj->empresa->user->name}} {{$ddjj->empresa->user->surname}}</div>
+                <div class="col-8 ps-5"><span class="marginleft ps-2">DNI</span> {{$ddjj->empresa->user->cuit}}</div>
+
+
+            </div>
+
+            <h4>Datos del producto</h4>
+
+            <div class="row ms-1 pdfProducto py-3">
+                <div class="col-12 marginleft"><span>Descripción del producto</span> {{$ddjj->descripcion}}</div>
+
+                <h5 class="marginleft">Datos del Establecimiento Productivo</h5>
+
+                <div class="col-3 "><span class="marginleft">Razón Social</span> @if($ddjj->fabricante) {{$ddjj->fabricante->razon_social}} @else {{$ddjj->empresa->razon_social}} @endif</div>
+                <div class="col-6"><span class="marginleft ps-5">Identificación del Establecimiento Productivo</span>
+                    {{$ddjj->nep}}</div>
+                <div class="col-3 "><span class="">Pais de origen</span> @if($ddjj->fabricante) {{$ddjj->fabricante->pais->descripcion}}@endif</div>
+
+                <h5 class="marginleft">Producto</h5>
+
+                <div class="col-4 "><span class="marginleft">Marca</span> {{$ddjj->marca}}</div>
+                <div class="col-4 "><span class="marginleft">Modelo</span> {{$ddjj->modelo}}</div>
+                <div class="col-4 "><span class="marginleft">NCM / SIM</span> {{$ddjj->ncm->pa}}</div>
+                <div class="col-12 "><span class="marginleft">Segmento</span> {{$ddjj->ncm->segmento}}</div>
+
+                <div class="row pdfNeumatico">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-6"><img src="img/llanta_ancho.png" class="iconpixel marginleft" alt="">
+                                </div>
+                                <div class="col-6"><span>{{$ddjj->ancho}}</span><br> Ancho nominal de la banda <br> (en milimetros)
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6"><img src="img/llanta_diametro.png" class="iconpixel marginleft"
+                                        alt=""></div>
+                                <div class="col-6"><span>{{$ddjj->diametro}}</span><br> Diámetro interior del neumático (en pulgadas)
+                                </div>
+                            </div>
+
+                            <div class="marginleft">Tipo de contrucción: <br> <span>{{$ddjj->tipo_construccion}}</span></div>
+
+                            <div class="row">
+                                <div class="col-6"><img src="img/llanta_peso.png" class="iconpixel marginleft" alt="">
+                                </div>
+                                <div class="col-6"><span>{{$ddjj->capacidad}}</span><br> Capacidad de carga <br> (en kilos)</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6 fw-bold "><p class="marginleft">Diseño</p></div>
+                                <div class="col-6">{{$ddjj->diseño}}</div>
+                            </div>
+
+                            <div class="row marginleft">
+                                <div class="col-9 p-0 fw-bold">El producto cumple en su formulación
+                                    con el límite máximo de presencia de hidrocarburos aromáticos policíclicos de 0.35%
+                                    de los protones de concavidad</div>
+                                <div class="col-3"><span class="ms-2">
+                                    @if($ddjj->hpa == '1')
+                                    SI
+                                    @else
+                                    NO
+                                    @endif
+                                </span> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="imagenContenedor" class="col-8 justify-content-center align-content-center align-items-center align-self-center">
+                        @foreach($files as $file)
+                        @if($file->type=="foto")
+                        <img src="<?php echo 'http://localhost/storage/' . $file->file ?>" class="img-fluid img-iferez imgpixel bord" alt="Imagen producto">
+                        @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+            @if($ddjj->estado == 'Aprobada')
+            @if($ddjj->vencimiento)
+            @php
+            $date=str_replace("-","",$ddjj->vencimiento);
+            @endphp
+            <div class="row ms-1 pdfFooter mt-4 text-center">
+                <div class="col-12"><span>Código de aprobación:</span> {{$ddjj->numero}}-{{$date}}</div>
+            </div>
+            @endif
+            @endif
+
+        </div>
+
+    </main>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

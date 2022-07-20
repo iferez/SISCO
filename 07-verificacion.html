@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!-- CSS / FONTAWESOME -->
+
+  <link rel="stylesheet" href="css/verificacion.css" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+  <title>Verificación</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container-fluid" id="header-ministerioDesarrollo">
+      <div class="row">
+        <div class="col-3 text-sm-end">
+          <img src="img/Grupo984w.svg" alt="Logo Ministerio" />
+        </div>
+
+        <div class="col-6 d-flex justify-content-center siscoHeader">
+          <h1 class="d-none d-lg-block ps-3">SISCO - <span>Sistema integrado de comercio</span></h1>
+        </div>
+
+        <div class="col-3 d-flex justify-content-center align-self-center mt-4 usuarioMenu">
+          <button class="btn btn-user rounded-pill" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MENU LATERAL -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="pe-2" id="offcanvasRightLabel">Nombre Usuario</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <hr>
+          <a href="">
+            <p><i class="fas fa-id-card"></i> Mi perfil</p>
+          </a>
+          <a href="">
+            <p><i class="fas fa-building"></i> Gestionar empresas</p>
+          </a>
+          <a href="">
+            <p><i class="fas fa-file-alt"></i> Mas acciones</p>
+          </a>
+          <hr>
+          <a href="">
+            <p><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</p>
+          </a>
+        </div>
+      </div>
+
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <div class="container verifContainer">
+      <h2>¡Hola, Nombre Usuario!</h2>
+
+      <h3 class="my-3">Es importante que verifiques tus datos personales</h3>
+      <p>Para poder acceder al sistema, tenes que validar que los datos que te mostramos a continuación sean correctos.
+      </p>
+
+      <div class="row">
+        <div class="col">
+          <h4 class="miPerfil"> <span class="numeracionStyle">1</span> Mi perfil</h4>
+
+            <div class="row miPerfilCard">
+              <div class="col-1 perfilBorde"></div>
+
+              <div class="col-11 perfilContenido">
+
+                 <!-- FORMULARIUO UNOOOOOOOOO -->
+                 <form class="row g-3 needs-validation"  name="formDatosUsuario" id="formDatosUsuario" >
+
+                  <div class="col-12 pt-2">
+                    <label for="validationCuit" class="form-label">CUIT</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" value="{{$usuario->cuit}}" id="validationCuit" placeholder="Solo números, sin guiones" required>
+                      <div class="invalid-feedback">
+                        Verifica tu CUIT, ingresá solo valores numericos
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="{{$usuario->name}}" required>
+                    <div class="invalid-feedback">
+                      Verifica tu nombre
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="{{$usuario->surname}}" required>
+                    <div class="invalid-feedback">
+                      Verifica tu apellido
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="validationCustom03" value="" required>
+                    <div class="invalid-feedback">
+                      Verifica tu teléfono, ingresá solo valores numericos
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 pb-2">
+                    <label for="validationCustom04" class="form-label">Correo electrónico</label>
+                    <input type="text" class="form-control" id="validationCustom04" value="{{$usuario->email}}" required>
+                    <div class="invalid-feedback">
+                      Verifica tu correo
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <button type="submit" class="btn btn-success fw-bold my-4  rounded-pill">
+                        Continuar
+                      </button>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+
+      <!-- EMPRESA -->
+
+      <div class="row">
+        <div class="col">
+          <h4 class="miPerfil" > <span class="numeracionStyle">2</span> Alta empresa
+          </h4>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <footer class="info-footer">
+    <div class="container-fluid" id="footer-ministerioDesarrollo">
+      <div class="row">
+        <div class="col-sm-4 ps-sm-3 text-sm-center">
+          <img src="img/Grupo984w.svg" alt="" />
+        </div>
+        <div class="info-footer offset-sm-5 col-sm-3">
+          <div class="terminos-footer">
+            <a href="" class="text-decoration-none text-light">
+              <p>Acerca de este sitio</p>
+            </a>
+            <a href="" class="text-decoration-none text-light">
+              <p>Términos y condiciones</p>
+            </a>
+            <a href="" class="text-decoration-none text-light">
+              <p>Ministerio</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="js/funcionAgregar.js"></script>
+  <script src="js/validacion.js"></script>
+</body>
+
+</html>

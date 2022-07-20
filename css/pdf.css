@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap");
+
+body {
+  font-family: "Encode Sans", sans-serif;
+}
+
+.logoMinContenedor {
+  max-width: 90%;
+  margin: auto;
+}
+
+.logoMin {
+  width: 280px;
+}
+
+.pdfContainer div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pdfContainer h5 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #37bbed !important;
+}
+
+.pdfHead {
+  background-color: #f2f2f2;
+}
+
+.pdfHead span {
+  font-weight: bold;
+  margin-right: 48px;
+}
+
+/* Datos usuario */
+
+.pdfUser {
+  border: 1px solid #e8e8e8;
+  border-left: 8px solid #37bbed;
+  border-radius: 6px;
+}
+
+.pdfUser span {
+  font-weight: bold;
+  margin-right: 48px;
+}
+
+/* Producto */
+
+.pdfProducto {
+  border: 1px solid #e8e8e8;
+  border-left: 8px solid #1072bb;
+  border-radius: 6px;
+}
+
+.pdfProducto span {
+  font-weight: bold;
+  margin-right: 48px;
+}
+
+.pdfProducto h5 {
+  color: #1072bb !important;
+}
+
+/* Neumatico */
+
+.pdfNeumatico span {
+  font-weight: bold;
+  color: #1072bb;
+  font-size: 26px;
+  margin-right: 0px !important;
+}
+
+.iconpixel {
+  max-width: 100px;
+  max-height: 120px;
+}
+
+.imgpixel {
+}
+
+/* Footer */
+
+.pdfFooter {
+  background-color: #555555;
+  color: #ffff;
+  border-radius: 6px;
+}
+
+.pdfFooter span {
+  font-weight: bold;
+  margin-right: 48px;
+  color: #ffff;
+}
+
+/* NUEVO */
+
+#headerPdf {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+#titulo {
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+.bord {
+  border: 1px solid #4b4b4b;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px !important;
+  margin-left: 4px;
+}
+
+.marginleft {
+  margin-left: 40px;
+}
+
+.img-iferez {
+  max-width: 100%;
+  height: auto;
+}
