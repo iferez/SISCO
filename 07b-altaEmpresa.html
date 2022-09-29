@@ -14,7 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <!-- CSS / FONTAWESOME -->
-
+    <link rel="stylesheet" href="css/master.css" />
     <link rel="stylesheet" href="css/verificacion.css" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -131,7 +131,8 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="fActividades" class="form-label">Fecha de inicio de actividades *</label>
+                                    <label for="fActividades" class="form-label">Fecha de inicio de actividades
+                                        *</label>
                                     <div class="input-group">
                                         <input id="fActividades" type="date" class="form-control" name="fActividades"
                                             required>
@@ -212,100 +213,99 @@
 
                                 <!-- DIRECCION TIPO DE EMPRESA -->
 
-                             
-                                    <h4 class="fw-bold pt-3">Dirección</h4>
-                                    <h5 class="fw-bold pt-2 pb-4">Domicilio real</h5>
 
-                                    <div class="col-12">
-                                        <label for="validationCalle" class="form-label">Calle</label>
-                                        <input type="text" class="form-control" name="" id="calle" required>
+                                <h4 class="fw-bold pt-3">Dirección</h4>
+                                <h5 class="fw-bold pt-2 pb-4">Domicilio real</h5>
+
+                                <div class="col-12">
+                                    <label for="validationCalle" class="form-label">Calle</label>
+                                    <input type="text" class="form-control" name="" id="calle" required>
+                                    <div class="invalid-feedback">
+                                        Ingresá una calle para tu dirección
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-6 col-md-3">
+                                        <label for="altura" class="form-label">Altura</label>
+                                        <input type="text" class="form-control" name="" id="altura" required>
                                         <div class="invalid-feedback">
-                                            Ingresá una calle para tu dirección
+                                            Ingresá una altura para tu dirección
                                         </div>
                                     </div>
 
-                                    <div class="row mt-3">
-                                        <div class="col-6 col-md-3">
-                                            <label for="altura" class="form-label">Altura</label>
-                                            <input type="text" class="form-control" name="" id="altura" required>
-                                            <div class="invalid-feedback">
-                                                Ingresá una altura para tu dirección
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-md-3">
-                                            <label for="piso" class="form-label">Piso</label>
-                                            <input type="text" class="form-control" id="piso" name="" required>
-                                            <div class="invalid-feedback">
-                                                Ingresá un piso para tu dirección
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-md-3">
-                                            <label for="dpto" class="form-label">Depto.</label>
-                                            <input type="text" class="form-control" id="dpto" name="" required>
-                                            <div class="invalid-feedback">
-                                                Ingresá un departamento para tu dirección
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-md-3">
-                                            <label for="codPostal" class="form-label">C.P</label>
-                                            <input type="text" class="form-control" id="codPostal" name="" required>
-                                            <div class="invalid-feedback">
-                                                Ingresá un codigo postal para tu dirección
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-group item-form">
-                                            <label for="provincia">Provincia</label>
-                                            <select id="provincia" onchange="filtrarPartido($(this))" name=""
-                                                class="form-select" required>
-                                                <option value=''>Seleccioná una Provincia</option>"
-                                                @foreach($provincias as $provincia)
-                                                <option value="{{$provincia->id}}">{{$provincia->descripcion}}
-                                                </option>
-                                                @endforeach
-                                            </select>
-
-                                        </div>
+                                    <div class="col-6 col-md-3">
+                                        <label for="piso" class="form-label">Piso</label>
+                                        <input type="text" class="form-control" id="piso" name="" required>
                                         <div class="invalid-feedback">
-                                            Ingresá una opción valida
+                                            Ingresá un piso para tu dirección
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="form-group item-form">
-                                            <label for="municipio">Municipio</label>
-                                            <select id="municipio" name="" onchange="filtrarLocalidad($(this))"
-                                                class="form-select" required>
-
-
-                                            </select>
-
-                                        </div>
+                                    <div class="col-6 col-md-3">
+                                        <label for="dpto" class="form-label">Depto.</label>
+                                        <input type="text" class="form-control" id="dpto" name="" required>
                                         <div class="invalid-feedback">
-                                            Ingresá una opción valida
+                                            Ingresá un departamento para tu dirección
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="form-group item-form">
-                                            <label for="localidad">Localidad</label>
-                                            <select name="" id="localidad" name="localidad" class="form-select"
-                                                required>
-
-                                            </select>
-
-                                        </div>
+                                    <div class="col-6 col-md-3">
+                                        <label for="codPostal" class="form-label">C.P</label>
+                                        <input type="text" class="form-control" id="codPostal" name="" required>
                                         <div class="invalid-feedback">
-                                            Ingresá una opción valida
+                                            Ingresá un codigo postal para tu dirección
                                         </div>
                                     </div>
-                               
+
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group item-form">
+                                        <label for="provincia">Provincia</label>
+                                        <select id="provincia" onchange="filtrarPartido($(this))" name=""
+                                            class="form-select" required>
+                                            <option value=''>Seleccioná una Provincia</option>"
+                                            @foreach($provincias as $provincia)
+                                            <option value="{{$provincia->id}}">{{$provincia->descripcion}}
+                                            </option>
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Ingresá una opción valida
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group item-form">
+                                        <label for="municipio">Municipio</label>
+                                        <select id="municipio" name="" onchange="filtrarLocalidad($(this))"
+                                            class="form-select" required>
+
+
+                                        </select>
+
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Ingresá una opción valida
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group item-form">
+                                        <label for="localidad">Localidad</label>
+                                        <select name="" id="localidad" name="localidad" class="form-select" required>
+
+                                        </select>
+
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Ingresá una opción valida
+                                    </div>
+                                </div>
+
 
                                 <!-- DIRECCION TIPO / DEPOSITO / ETC -->
 
@@ -478,7 +478,8 @@
                                         <div class="col-12">
                                             <label for="validationMailEmpresa" class="form-label">E-Mail</label>
                                             <div class="input-group has-validation">
-                                                <input type="text" class="form-control" id="validationMailEmpresa" name="MailEmpresa[]" required>
+                                                <input type="text" class="form-control" id="validationMailEmpresa"
+                                                    name="MailEmpresa[]" required>
                                                 <div class="invalid-feedback">
                                                     Ingresa un correo electronico
                                                 </div>
@@ -508,7 +509,8 @@
                                     </div>
 
                                     <button type="button" class="btn btn-masInfo" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus" title="Requerimientos"
+                                        data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus"
+                                        title="Requerimientos"
                                         data-bs-content="Los archivos deben ser menores que 500KB. Tipos de archivos permitidos: .pdf .rar .zip">
                                         <i class="fas fa-question-circle"></i> Más información
                                     </button>
@@ -519,32 +521,23 @@
 
                                 <div class="row mt-4">
                                     <div class="col-md-6">
-                                      <button type="button" class="btn btn-secondary fw-bold my-4  rounded-pill">
-                                        Cancelar
-                                      </button>
+                                        <a href="07-verificacion.html" type="button" class="btn btn-secondary fw-bold my-4 rounded-pill">
+                                            Cancelar
+                                        </a>
                                     </div>
-                
+
                                     <div class="col-md-6">
-                                      <button type="submit"  class="btn btn-success fw-bold my-4  rounded-pill">
-                                        Confirmar datos
-                                      </button>
+                                        <button type="button" class="btn btn-success fw-bold my-4 rounded-pill"  data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                            Confirmar datos
+                                        </button>
                                     </div>
-                                  </div>
+                                </div>
 
                             </form>
 
                         </div>
                     </div>
-
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <button class="btn btn-success fw-bold my-4  rounded-pill" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                MODAL
-                            </button>
-                        </div>
-                    </div>
-                    
 
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -564,7 +557,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-cancelarModal rounded-pill"
                                         data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-confirmarModal rounded-pill">Confirmar</button>
+                                    <a href="08-confirmacion.html" type="button" class="btn btn-confirmarModal rounded-pill">Confirmar</a>
                                 </div>
                             </div>
                         </div>

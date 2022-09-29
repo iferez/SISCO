@@ -14,7 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <!-- CSS / FONTAWESOME -->
-
+    <link rel="stylesheet" href="css/master.css" />
     <link rel="stylesheet" href="css/login.css" />
 
     <title>Login</title>
@@ -23,22 +23,22 @@
 <body>
     <header>
         <nav class="container-fluid" id="header-ministerioDesarrollo">
-          <div class="row">
-            <div class="col-sm-4 ps-3 text-sm-center">
-              <img src="img/Grupo984w.svg" alt="Logo Ministerio" />
+            <div class="row">
+                <div class="col-sm-4 ps-3 text-sm-center">
+                    <img src="img/Grupo984w.svg" alt="Logo Ministerio" />
+                </div>
             </div>
-          </div>
         </nav>
-      </header>
+    </header>
 
 
-    <main>
-        <div class="container-main">
+    <main class="container-main">
+
             <section>
                 <div class="banner d-flex justify-content-center">
                     <img src="img/containersBannerResponsive.png" class="img-fluid d-lg-none" alt="" />
                     <img src="img/containersBanner.png" class="img-fluid d-none d-lg-block" alt="" />
-        
+
                     <h1>SISCO <br><span class="subStyle">Sistema Integrado de comercio</span></h1>
                 </div>
             </section>
@@ -49,28 +49,30 @@
 
                     <div class="col-md-10 pb-5">
                         <div class="mt-4 mt-md-5 mb-4 text-center">
-                            <h2>Bienvenido, <br class="d-md-none"> para continuar <br class="d-md-none">deberá identificarse</h2>
-                            <p class="mt-4"> Al hacer click será dirigido al servicio <br class="d-md-none"> de autenticación.</p>
+                            <h2>Bienvenido, <br class="d-md-none"> para continuar <br class="d-md-none">deberá
+                                identificarse</h2>
+                            <p class="mt-4"> Al hacer click será dirigido al servicio <br class="d-md-none"> de
+                                autenticación.</p>
                         </div>
 
                         <div class="row text-center icono-boton">
                             <div class="col">
                                 <p class="cajaImg"><img src="/img/logo_afip.png" class="imgAfip" alt=""></p>
-                                <button class="btn btn-ingreso rounded-pill" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="Ingreso con AFIP">INICIAR SESIÓN EN AFIP</button>
+                                <a href="02-loginUsuario.html" class="btn btn-ingreso rounded-pill" data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom" title="Ingreso con AFIP">INICIAR SESIÓN EN AFIP</a>
                             </div>
 
                         </div>
 
                         <hr>
-                        <p class="claveFiscal"> <span class="fw-bold">Acceso con CLAVE FISCAL</span>  | Única e intransferible</p>
-                        
+                        <p class="claveFiscal"> <span class="fw-bold">Acceso con CLAVE FISCAL</span> | Única e
+                            intransferible</p>
+
                     </div>
                 </div>
 
 
             </section>
-        </div>
     </main>
 
     <footer class="info-footer">

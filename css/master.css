@@ -1,0 +1,13 @@
+
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+  color: #333333;
+}
+
+main {
+  min-height: -webkit-calc(100vh - 283px);
+  min-height: -moz-calc(100vh - 283px);
+  min-height: calc(100vh - 283px);
+}

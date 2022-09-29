@@ -14,7 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <!-- CSS / FONTAWESOME -->
-
+    <link rel="stylesheet" href="css/master.css" />
     <link rel="stylesheet" href="css/declaracion.css" />
 
     <script src="https://kit.fontawesome.com/534893fe33.js" crossorigin="anonymous"></script>
@@ -708,27 +708,21 @@
 
                     <div class="row mt-4">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-secondary fw-bold my-4 rounded-pill">
+                            <a href="12-neumaticos.html" type="button" class="btn btn-secondary fw-bold my-4 rounded-pill">
                                 Cancelar
-                            </button>
+                            </a>
                         </div>
-    
+
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-success fw-bold my-4 rounded-pill">
+                            <a href="14-pdf.html" type="button" class="btn btn-success fw-bold my-4 rounded-pill">
                                 Guardar
-                            </button>
+                            </a>
                         </div>
                     </div>
 
                 </form>
-           
-            </div>
 
-            <!-- 
-            <button type="submit" class="btn btn-success fw-bold my-4  rounded-pill" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop">
-            Guardar
-        </button>  -->
+            </div>
 
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -744,9 +738,9 @@
                             ¿ Estás seguro de que deseas dar de alta la DJHA ingresada?
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-cancelarModal rounded-pill"
-                                data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-confirmarModal rounded-pill">Confirmar</button>
+                            <a type="button" class="btn btn-cancelarModal rounded-pill"
+                                data-bs-dismiss="modal">Cancelar</a>
+                            <a type="button" class="btn btn-confirmarModal rounded-pill">Confirmar</a>
                         </div>
                     </div>
                 </div>
@@ -789,22 +783,22 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/funciones.js"></script>
 
-    <script> 
-        function alertaChecked(){ 
-               console.log("HOLAAAAAAAAAAA")
-               document.getElementById("lola").classList.remove("random");
-               document.getElementById("lola").classList.remove("random2");
-               document.getElementById("lola").classList.add("random");
-          
-        } 
-        function alertaCheckedDos(){ 
+    <script>
+        function alertaChecked() {
+            console.log("HOLAAAAAAAAAAA")
+            document.getElementById("lola").classList.remove("random");
+            document.getElementById("lola").classList.remove("random2");
+            document.getElementById("lola").classList.add("random");
+
+        }
+        function alertaCheckedDos() {
             console.log("CHAAAAAAAAAAU")
             document.getElementById("lola").classList.remove("random");
-               document.getElementById("lola").classList.remove("random2");
-               document.getElementById("lola").classList.add("random2");
-        } 
+            document.getElementById("lola").classList.remove("random2");
+            document.getElementById("lola").classList.add("random2");
+        }
 
-        </script> 
+    </script>
 </body>
 
 </html>
