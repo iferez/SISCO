@@ -24,56 +24,48 @@
 </head>
 
 <body>
-
-    <header>
-        <nav class="container-fluid" id="header-ministerioDesarrollo">
-            <div class="row">
-                <div class="col-3 text-sm-end">
-                    <img src="img/Grupo984w.svg" alt="Logo Ministerio" />
-                </div>
-
-                <div class="col-6 d-flex justify-content-center siscoHeader">
-                    <h1 class="d-none d-lg-block ps-3">SISCO - <span>Sistema integrado de comercio</span></h1>
-                </div>
-
-                <div class="col-3 d-flex justify-content-center align-self-center mt-4 usuarioMenu">
-                    <button class="btn btn-user rounded-pill" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <i class="fas fa-user"></i>
-                    </button>
-                </div>
+    <header id="header-ministerioDesarrollo">
+        <div class="container">
+          <div class="row">
+            <div id="headerColUno" class="col-6 d-flex align-items-center">
+              <a href="#">
+                <img src="img/Grupo984w.svg" class="logoHeader" alt="Logo Ministerio">
+              </a>
             </div>
-
-            <!-- MENU LATERAL -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="pe-2" id="offcanvasRightLabel">Nombre Usuario</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <hr>
-                    <a href="">
-                        <p><i class="fas fa-id-card"></i> Mi perfil</p>
-                    </a>
-                    <a href="">
-                        <p><i class="fas fa-building"></i> Gestionar empresas</p>
-                    </a>
-                    <a href="">
-                        <p><i class="fas fa-file-alt"></i> Mas acciones</p>
-                    </a>
-                    <hr>
-                    <a href="">
-                        <p><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</p>
-                    </a>
-                </div>
+            <div id="headerColDos" class="col-6 d-flex justify-content-end align-items-center usuarioMenu">
+              <button class="btn btn-user rounded-pill" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fas fa-user"></i>
+              </button>
             </div>
-
-
-        </nav>
-    </header>
-
+          </div>
+    
+          <!-- MENU LATERAL -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="pe-2" id="offcanvasRightLabel">Nombre Usuario</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <hr>
+              <a href="">
+                <p><i class="fas fa-id-card"></i> Mi perfil</p>
+              </a>
+              <a href="">
+                <p><i class="fas fa-building"></i> Gestionar empresas</p>
+              </a>
+              <a href="">
+                <p><i class="fas fa-file-alt"></i> Mas acciones</p>
+              </a>
+              <hr>
+              <a href="">
+                <p><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</p>
+              </a>
+            </div>
+          </div>
+    
+        </div>
+      </header>
 
     <main>
 
@@ -572,23 +564,17 @@
     </main>
 
 
-    <footer class="info-footer">
-        <div class="container-fluid" id="footer-ministerioDesarrollo">
+    <footer id="footer-ministerioDesarrollo">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-4 ps-sm-3 text-sm-center">
-                    <img src="img/Grupo984w.svg" alt="" />
+                <div id="footerColUno" class="col-6 d-flex align-items-center">
+                    <img src="img/Grupo984w.svg" class="logoHeader" alt="Logo Ministerio">
                 </div>
-                <div class="info-footer offset-sm-5 col-sm-3">
-                    <div class="terminos-footer">
-                        <a href="" class="text-decoration-none text-light">
-                            <p>Acerca de este sitio</p>
-                        </a>
-                        <a href="" class="text-decoration-none text-light">
-                            <p>Términos y condiciones</p>
-                        </a>
-                        <a href="" class="text-decoration-none text-light">
-                            <p>Ministerio</p>
-                        </a>
+                <div id="footerColDos" class="col-6">
+                    <div class="infoFooter">
+                        <a href=""> Acerca de este sitio </a>
+                        <a href=""> Términos y condiciones </a>
+                        <a href=""> Ministerio </a>
                     </div>
                 </div>
             </div>

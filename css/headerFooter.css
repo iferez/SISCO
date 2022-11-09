@@ -8,59 +8,34 @@
   box-sizing: content-box;
 }
 
-#header-ministerioDesarrollo {
-  height: 106px;
-  background: #37bbed;
-  box-shadow: 0px 1px 5px 2px #00000023 !important;
-  z-index: 1;
-}
 
-#header-ministerioDesarrollo img {
-  margin-top: 20px;
-}
-
-#footer-ministerioDesarrollo {
-  height: 202;
-  background: #37bbed;
-  z-index: 1;
+main {
+  min-height: -webkit-calc(100vh - 164px);
+  min-height: -moz-calc(100vh - 164px);
+  min-height: calc(100vh - 164px);
 }
 
 header img,
 footer img {
-  max-height: 66.4px;
+  max-height: 48px;
 }
 
-.info-footer img {
-  margin-top: 75px;
+/* HEADER */
+#header-ministerioDesarrollo {
+  height: 64px;
+  background: #37bbed;
+  box-shadow: 0px 1px 5px 2px #6c6c6c46 !important;
+  z-index: 999;
 }
 
-.terminos-footer {
-  font-size: 0.9rem;
-  margin-top: 30px;
+#headerColUno,
+#headerColDos {
+  height: 64px;
 }
 
-/* SISCO HEADER */
-.siscoHeader {
-  white-space: nowrap;
-  margin-top: 40px;
-}
-
-.siscoHeader h1 {
-  white-space: nowrap;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffff;
-}
-.siscoHeader span{
-  font-weight: normal;
-}
-
-
-
-/* MENU USUARIO*/
-
+/* USER MENU */
 .usuarioMenu i {
-  font-size: 22px;
+  font-size: 16px;
   color: #0072bb;
 }
 .usuarioMenu .btn {
@@ -109,61 +84,43 @@ footer img {
   margin-right: 10px;
 }
 
-/* ---------- */
-
-@media (min-width: 575px) {
-  #footer-ministerioDesarrollo {
-    height: 202px;
-  }
-
-  .terminos-footer {
-    font-size: 1rem;
-  }
+/* FOOTER */
+#footer-ministerioDesarrollo {
+  height: 100px;
+  background: #37bbed;
+  z-index: 999;
 }
 
-@media (min-width: 768px) {
-  #header-ministerioDesarrollo img {
-    margin-left: 16px;
-  }
-  .terminos-footer {
-    font-size: 1.1rem;
-    margin-top: 50px;
-  }
+#footerColUno,
+#footerColDos {
+  height: 100px;
+}
 
-  .usuarioMenu i {
-    font-size: 26px;
-  }
-  .usuarioMenu .btn {
-    margin-right: 20%;
+#footerColDos {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+#footerColDos .infoFooter a {
+  display: block;
+  font-size: 12px;
+  color: #ffff;
+  line-height: 1.8;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+  #header-ministerioDesarrollo .userMenu .dropdown i:hover {
+    color: #115f98;
+    transition: 0.3s;
   }
 }
 
 @media (min-width: 1024px) {
-  #header-ministerioDesarrollo img {
-    margin-left: 0px;
-  }
-  
   .offcanvas-body p {
     font-size: 18px;
-  }
-
-  .offcanvas-body i {
-    margin-right: 20px;
-  }
-}
-@media (min-width: 1280px) {
-  .siscoHeader h1 {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 1600px) {
-  #header-ministerioDesarrollo img {
-    margin-right: 20px;
-  }
-}
-@media (min-width: 1900px) {
-  #header-ministerioDesarrollo img {
-    margin-right: 50px;
   }
 }
