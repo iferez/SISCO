@@ -77,73 +77,66 @@
       </p>
 
       <div class="row">
-        <div class="col">
-          <h4 class="miPerfil"> <span class="numeracionStyle">1</span> Mi perfil</h4>
+        <div class="col-12">
+          <h4 class="miPerfil"> <button class="numeracionStyle">1</button> Mi perfil</h4>
 
-          <div class="row miPerfilCard">
-            <div class="col-1 perfilBorde"></div>
+          <div class="perfilContenido miPerfilCard">
+            <!-- FORMULARIUO UNO -->
+            <form class="row g-3 needs-validation" name="formDatosUsuario" id="formDatosUsuario">
 
-            <div class="col-11 perfilContenido">
-
-              <!-- FORMULARIUO UNO -->
-              <form class="row g-3 needs-validation" name="formDatosUsuario" id="formDatosUsuario">
-
-                <div class="col-12 pt-2">
-                  <label for="validationCuit" class="form-label">CUIT</label>
-                  <div class="input-group has-validation">
-                    <input type="text" class="form-control" value="" id="validationCuit"
-                      placeholder="Solo números, sin guiones" required>
-                    <div class="invalid-feedback">
-                      Verifica tu CUIT, ingresá solo valores numericos
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="validationCustom01" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="validationCustom01" value="" required>
+              <div class="col-12 pt-2">
+                <label for="validationCuit" class="form-label">CUIT</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" value="" id="validationCuit"
+                    placeholder="Solo números, sin guiones" required>
                   <div class="invalid-feedback">
-                    Verifica tu nombre
+                    Verifica tu CUIT, ingresá solo valores numericos
                   </div>
                 </div>
+              </div>
 
-                <div class="col-md-6">
-                  <label for="validationCustom02" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="validationCustom02" value="" required>
-                  <div class="invalid-feedback">
-                    Verifica tu apellido
-                  </div>
+              <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                <div class="invalid-feedback">
+                  Verifica tu nombre
                 </div>
+              </div>
 
-                <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label">Teléfono</label>
-                  <input type="text" class="form-control" id="validationCustom03" value="" required>
-                  <div class="invalid-feedback">
-                    Verifica tu teléfono, ingresá solo valores numericos
-                  </div>
+              <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02" value="" required>
+                <div class="invalid-feedback">
+                  Verifica tu apellido
                 </div>
+              </div>
 
-                <div class="col-md-6 pb-2">
-                  <label for="validationCustom04" class="form-label">Correo electrónico</label>
-                  <input type="text" class="form-control" id="validationCustom04" value="" required>
-                  <div class="invalid-feedback">
-                    Verifica tu correo
-                  </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="validationCustom03" value="" required>
+                <div class="invalid-feedback">
+                  Verifica tu teléfono, ingresá solo valores numericos
                 </div>
+              </div>
 
-                <div class="row">
-                  <div class="col">
-                    <a href="07b-altaEmpresa.html" type="button" class="btn btn-success fw-bold my-4 rounded-pill">
-                      Continuar
-                    </a>
-                  </div>
+              <div class="col-md-6 pb-2">
+                <label for="validationCustom04" class="form-label">Correo electrónico</label>
+                <input type="text" class="form-control" id="validationCustom04" value="" required>
+                <div class="invalid-feedback">
+                  Verifica tu correo
                 </div>
+              </div>
 
-              </form>
+              <div class="row">
+                <div class="col-12 text-end">
+                  <a href="07b-altaEmpresa.html" type="button" class="btn btn-success fw-bold my-4 rounded-pill">
+                    Continuar
+                  </a>
+                </div>
+              </div>
 
-            </div>
+            </form>
           </div>
-
 
         </div>
       </div>
@@ -152,7 +145,7 @@
 
       <div class="row">
         <div class="col">
-          <h4 class="miPerfil"> <span class="numeracionStyle">2</span> Alta empresa
+          <h4 class="miPerfil"> <button class="numeracionStyle">2</button> Alta empresa
           </h4>
         </div>
       </div>

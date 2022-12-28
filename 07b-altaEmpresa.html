@@ -26,46 +26,48 @@
 <body>
     <header id="header-ministerioDesarrollo">
         <div class="container">
-          <div class="row">
-            <div id="headerColUno" class="col-6 d-flex align-items-center">
-              <a href="#">
-                <img src="img/Grupo984w.svg" class="logoHeader" alt="Logo Ministerio">
-              </a>
+            <div class="row">
+                <div id="headerColUno" class="col-6 d-flex align-items-center">
+                    <a href="#">
+                        <img src="img/Grupo984w.svg" class="logoHeader" alt="Logo Ministerio">
+                    </a>
+                </div>
+                <div id="headerColDos" class="col-6 d-flex justify-content-end align-items-center usuarioMenu">
+                    <button class="btn btn-user rounded-pill" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
             </div>
-            <div id="headerColDos" class="col-6 d-flex justify-content-end align-items-center usuarioMenu">
-              <button class="btn btn-user rounded-pill" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <i class="fas fa-user"></i>
-              </button>
+
+            <!-- MENU LATERAL -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="pe-2" id="offcanvasRightLabel">Nombre Usuario</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <hr>
+                    <a href="">
+                        <p><i class="fas fa-id-card"></i> Mi perfil</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fas fa-building"></i> Gestionar empresas</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fas fa-file-alt"></i> Mas acciones</p>
+                    </a>
+                    <hr>
+                    <a href="">
+                        <p><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</p>
+                    </a>
+                </div>
             </div>
-          </div>
-    
-          <!-- MENU LATERAL -->
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="pe-2" id="offcanvasRightLabel">Nombre Usuario</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <hr>
-              <a href="">
-                <p><i class="fas fa-id-card"></i> Mi perfil</p>
-              </a>
-              <a href="">
-                <p><i class="fas fa-building"></i> Gestionar empresas</p>
-              </a>
-              <a href="">
-                <p><i class="fas fa-file-alt"></i> Mas acciones</p>
-              </a>
-              <hr>
-              <a href="">
-                <p><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</p>
-              </a>
-            </div>
-          </div>
-    
+
         </div>
-      </header>
+    </header>
 
     <main>
 
@@ -79,486 +81,468 @@
             <div class="row">
                 <div class="col">
                     <h4 class="miPerfil">
-                        <span class="numeracionStyle">1</span> Mi perfil <i class="fas fa-check-circle ms-5"></i>
+                        <button class="numeracionStyle">1</button> Mi perfil <i class="fas fa-check-circle ms-4"></i>
                     </h4>
                 </div>
             </div>
 
             <!-- EMPRESA -->
-
-            <div class="row">
-                <div class="col">
-                    <h4 class="miPerfil"> <span class="numeracionStyle">2</span> Alta empresa</h4>
-
-
-                    <div class="row miPerfilCard">
-                        <div class="col-1 perfilBorde"></div>
-
-                        <div class="col-11 perfilContenido">
-
-                            <!-- FORMULARIO EMPRESA -->
-                            <form class="row g-3 needs-validation" action="#" name="formDatosEmpresa"
-                                id="formDatosEmpresa">
-
-                                <h4 class="fw-bold pt-3">Datos de la empresa</h4>
-
-                                <div class="col-12">
-                                    <label for="cuitEmpresa" class="form-label">CUIT *</label>
-                                    <div class="input-group has-validation">
-                                        <input type="text" class="form-control" id="cuitEmpresa" name="cuitEmpresa"
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Verifica tu CUIT, ingresá solo valores numericos
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="razonSocial" class="form-label">Razón social *</label>
-                                    <input type="text" class="form-control" id="razonSocial" name="razonSocial"
-                                        required>
-                                    <div class="invalid-feedback">
-                                        Verifica tu Razón social
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="fActividades" class="form-label">Fecha de inicio de actividades
-                                        *</label>
-                                    <div class="input-group">
-                                        <input id="fActividades" type="date" class="form-control" name="fActividades"
-                                            required>
-                                        <div class="invalid-feedback">Verifica la fecha de incio de actividades</div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group item-form">
-                                        <label for="actPrincipal" class="form-label">Actividad principal *</label>
-                                        <select name="actPrincipal" id="actPrincipal" required class="form-select">
-                                            <option value="">Seleccioná una actividad principal</option>
-                                            @foreach($actividades as $actividad)
-                                            <option value="{{$actividad->id}}">{{$actividad->descripcion}}</option>
-                                            @endforeach
-                                        </select>
-
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Ingresá una opción valida
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12">
-                                    <div class="form-group item-form">
-                                        <label for="actSecundaria" class="form-label">Actividad secundaria</label>
-                                        <select name="actSecundaria" id="actSecundaria" class="form-select">
-                                            <option value="">Seleccioná una actividad Secundaria</option>
-                                            @foreach($actividades as $actividad)
-                                            <option value="{{$actividad->id}}">{{$actividad->descripcion}}</option>
-                                            @endforeach
-                                        </select>
-
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Ingresá una opción valida
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="rump" class="form-label">RUMP *</label>
-                                    <input type="numeric" class="form-control" id="rump" name="rump" required>
-                                    <div class="invalid-feedback">
-                                        Verifica tu RUMP
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="rump" class="form-label">NEP Nro de Establecimiento Productivo</label>
-                                    <input type="numeric" class="form-control" id="nep" name="nep">
-                                    <div class="invalid-feedback">
-                                        Verifica tu NEP
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-12 clonarMarca">
-                                    <div class="form-group col-md-12">
-                                        <label for="marcas" class="form-label">Marca</label>
-                                        <input type="text" class="form-control" name="marcas[]" />
-
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 contenedorMarcas"></div>
-
-                                <div class="row">
-                                    <div class="col-12 d-flex justify-content-end pt-3">
-                                        <button onclick="agregarMarca()" type="button"
-                                            class="btn btn-direccion text-primary rounded-pill">+ Agregar
-                                            Marca</button>
-                                    </div>
-                                </div>
-
-
-                                <!-- DIRECCION TIPO DE EMPRESA -->
-
-
-                                <h4 class="fw-bold pt-3">Dirección</h4>
-                                <h5 class="fw-bold pt-2 pb-4">Domicilio real</h5>
-
-                                <div class="col-12">
-                                    <label for="validationCalle" class="form-label">Calle</label>
-                                    <input type="text" class="form-control" name="" id="calle" required>
-                                    <div class="invalid-feedback">
-                                        Ingresá una calle para tu dirección
-                                    </div>
-                                </div>
-
-                                <div class="row mt-3">
-                                    <div class="col-6 col-md-3">
-                                        <label for="altura" class="form-label">Altura</label>
-                                        <input type="text" class="form-control" name="" id="altura" required>
-                                        <div class="invalid-feedback">
-                                            Ingresá una altura para tu dirección
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-3">
-                                        <label for="piso" class="form-label">Piso</label>
-                                        <input type="text" class="form-control" id="piso" name="" required>
-                                        <div class="invalid-feedback">
-                                            Ingresá un piso para tu dirección
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-3">
-                                        <label for="dpto" class="form-label">Depto.</label>
-                                        <input type="text" class="form-control" id="dpto" name="" required>
-                                        <div class="invalid-feedback">
-                                            Ingresá un departamento para tu dirección
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-3">
-                                        <label for="codPostal" class="form-label">C.P</label>
-                                        <input type="text" class="form-control" id="codPostal" name="" required>
-                                        <div class="invalid-feedback">
-                                            Ingresá un codigo postal para tu dirección
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group item-form">
-                                        <label for="provincia">Provincia</label>
-                                        <select id="provincia" onchange="filtrarPartido($(this))" name=""
-                                            class="form-select" required>
-                                            <option value=''>Seleccioná una Provincia</option>"
-                                            @foreach($provincias as $provincia)
-                                            <option value="{{$provincia->id}}">{{$provincia->descripcion}}
-                                            </option>
-                                            @endforeach
-                                        </select>
-
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Ingresá una opción valida
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group item-form">
-                                        <label for="municipio">Municipio</label>
-                                        <select id="municipio" name="" onchange="filtrarLocalidad($(this))"
-                                            class="form-select" required>
-
-
-                                        </select>
-
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Ingresá una opción valida
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group item-form">
-                                        <label for="localidad">Localidad</label>
-                                        <select name="" id="localidad" name="localidad" class="form-select" required>
-
-                                        </select>
-
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Ingresá una opción valida
-                                    </div>
-                                </div>
-
-
-                                <!-- DIRECCION TIPO / DEPOSITO / ETC -->
-
-                                <div class="clonarDireccion">
-                                    <div class="row">
-                                        <h5 class="fw-bold py-4">Domicilio especial</h5>
-
-                                        <div class="form-group item-form">
-                                            <label for="tDomicilio" class="form-label">Tipo</label>
-                                            <select name="" id="tDomicilio" class="form-select" required>
-                                                <option value="">Seleccioná un tipo de tipo_domicilio</option>
-                                                @foreach($tDomicilio as $domicilio)
-                                                <option value="{{$domicilio->id}}">{{$domicilio->domicilio}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Ingresá una opción valida
-                                        </div>
-
-
-                                        <div class="col-12">
-                                            <label for="validationCalle" class="form-label">Calle</label>
-                                            <input type="text" class="form-control" name="" id="calle" required>
-                                            <div class="invalid-feedback">
-                                                Ingresá una calle para tu dirección
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-6 col-md-3">
-                                                <label for="altura" class="form-label">Altura</label>
-                                                <input type="text" class="form-control" name="" id="altura" required>
-                                                <div class="invalid-feedback">
-                                                    Ingresá una altura para tu dirección
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6 col-md-3">
-                                                <label for="piso" class="form-label">Piso</label>
-                                                <input type="text" class="form-control" id="piso" name="" required>
-                                                <div class="invalid-feedback">
-                                                    Ingresá un piso para tu dirección
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6 col-md-3">
-                                                <label for="dpto" class="form-label">Depto.</label>
-                                                <input type="text" class="form-control" id="dpto" name="" required>
-                                                <div class="invalid-feedback">
-                                                    Ingresá un departamento para tu dirección
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6 col-md-3">
-                                                <label for="codPostal" class="form-label">C.P</label>
-                                                <input type="text" class="form-control" id="codPostal" name="" required>
-                                                <div class="invalid-feedback">
-                                                    Ingresá un codigo postal para tu dirección
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="form-group item-form">
-                                                <label for="provincia">Provincia</label>
-                                                <select id="provincia" onchange="filtrarPartido($(this))" name=""
-                                                    class="form-select" required>
-                                                    <option value=''>Seleccioná una Provincia</option>"
-                                                    @foreach($provincias as $provincia)
-                                                    <option value="{{$provincia->id}}">{{$provincia->descripcion}}
-                                                    </option>
-                                                    @endforeach
-                                                </select>
-
-                                            </div>
-                                            <div class="invalid-feedback">
-                                                Ingresá una opción valida
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="form-group item-form">
-                                                <label for="municipio">Municipio</label>
-                                                <select id="municipio" name="" onchange="filtrarLocalidad($(this))"
-                                                    class="form-select" required>
-
-
-                                                </select>
-
-                                            </div>
-                                            <div class="invalid-feedback">
-                                                Ingresá una opción valida
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="form-group item-form">
-                                                <label for="localidad">Localidad</label>
-                                                <select name="" id="localidad" name="localidad" class="form-select"
-                                                    required>
-
-                                                </select>
-
-                                            </div>
-                                            <div class="invalid-feedback">
-                                                Ingresá una opción valida
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="contenedorDireccion"></div>
-
-                                <div class="row">
-                                    <div class="col-12 d-flex justify-content-end pt-3">
-                                        <button type="button" onclick="agregarDireccion()"
-                                            class="btn btn-direccion text-primary rounded-pill" required>+ Agregar
-                                            Dirección</button>
-                                    </div>
-                                </div>
-
-
-                                <h4 class="fw-bold pt-3">Datos de contacto</h4>
-
-
-                                <div class="clonarTelefono">
-                                    <div class="row">
-                                        <div class="col-6 col-md-4">
-                                            <label for="codArea" class="form-label">Código de area</label>
-                                            <div class="input-group">
-                                                <span class="input-group-text rounded-end" data-bs-toggle="tooltip"
-                                                    data-bs-placement="bottom" title="Agregar codArea"> 0 </span>
-                                                <input id="codArea" type="text" class="form-control" name="" required>
-
-                                                <div class="invalid-feedback">
-                                                    Ingresá un cádigo de area
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6 col-md-6">
-                                            <label for="telefono" class="form-label">Teléfono</label>
-                                            <div class="input-group">
-                                                <input id="telefono" type="text" class="form-control" name="" required>
-
-                                                <div class="invalid-feedback">
-                                                    Ingresá un teléfono valido
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 contenedorTelefono"></div>
-
-                                <div class="row">
-                                    <div class="col-12 d-flex justify-content-end pt-3">
-                                        <button type="button" onclick="agregarTelefono()"
-                                            class="btn btn-direccion text-primary rounded-pill">+ Agregar
-                                            Teléfono</button>
-                                    </div>
-                                </div>
-
-                                <div class="clonarEmail">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label for="validationMailEmpresa" class="form-label">E-Mail</label>
-                                            <div class="input-group has-validation">
-                                                <input type="text" class="form-control" id="validationMailEmpresa"
-                                                    name="MailEmpresa[]" required>
-                                                <div class="invalid-feedback">
-                                                    Ingresa un correo electronico
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="contenedorEmail"></div>
-
-                                <div class="row">
-                                    <div class="col-12 d-flex justify-content-end pt-3">
-                                        <button type="button" onclick="agregarEmail()"
-                                            class="btn btn-direccion text-primary rounded-pill">+ Agregar
-                                            E-Mail</button>
-                                    </div>
-                                </div>
-
-
-
-                                <h4 class="fw-bold pt-3">Documentación y apoderamiento de la empresa</h4>
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <input type="file" name="file" class="form-control" aria-label="file example"
-                                            required>
-                                        <div class="invalid-feedback">Porfavor ingrese un archivo valido</div>
-                                    </div>
-
-                                    <button type="button" class="btn btn-masInfo" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus"
-                                        title="Requerimientos"
-                                        data-bs-content="Los archivos deben ser menores que 500KB. Tipos de archivos permitidos: .pdf .rar .zip">
-                                        <i class="fas fa-question-circle"></i> Más información
-                                    </button>
-                                </div>
-
-                                <!-- BOTONES CANCELAR CONFIRMAR -->
-
-
-                                <div class="row mt-4">
-                                    <div class="col-md-6">
-                                        <a href="07-verificacion.html" type="button" class="btn btn-secondary fw-bold my-4 rounded-pill">
-                                            Cancelar
-                                        </a>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <button type="button" class="btn btn-success fw-bold my-4 rounded-pill"  data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
-                                            Confirmar datos
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </form>
+            <h4 class="miPerfil"> <button class="numeracionStyle">2</button> Alta empresa</h4>
+            <div class="perfilContenido miPerfilCard">
+
+                <!-- FORMULARIO EMPRESA -->
+                <form class="row g-3 needs-validation" action="#" name="formDatosEmpresa" id="formDatosEmpresa">
+
+                    <h4 class="fw-bold pt-3">Datos de la empresa</h4>
+
+                    <div class="col-12">
+                        <label for="cuitEmpresa" class="form-label">CUIT *</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="cuitEmpresa" name="cuitEmpresa" required>
+                            <div class="invalid-feedback">
+                                Verifica tu CUIT, ingresá solo valores numericos
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="razonSocial" class="form-label">Razón social *</label>
+                        <input type="text" class="form-control" id="razonSocial" name="razonSocial" required>
+                        <div class="invalid-feedback">
+                            Verifica tu Razón social
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="fActividades" class="form-label">Fecha de inicio de actividades
+                            *</label>
+                        <div class="input-group">
+                            <input id="fActividades" type="date" class="form-control" name="fActividades" required>
+                            <div class="invalid-feedback">Verifica la fecha de incio de actividades</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="actPrincipal" class="form-label">Actividad principal *</label>
+                            <select name="actPrincipal" id="actPrincipal" required class="form-select">
+                                <option value="">Seleccioná una actividad principal</option>
+                                @foreach($actividades as $actividad)
+                                <option value="{{$actividad->id}}">{{$actividad->descripcion}}</option>
+                                @endforeach
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="actSecundaria" class="form-label">Actividad secundaria</label>
+                            <select name="actSecundaria" id="actSecundaria" class="form-select">
+                                <option value="">Seleccioná una actividad Secundaria</option>
+                                @foreach($actividades as $actividad)
+                                <option value="{{$actividad->id}}">{{$actividad->descripcion}}</option>
+                                @endforeach
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="rump" class="form-label">RUMP *</label>
+                        <input type="numeric" class="form-control" id="rump" name="rump" required>
+                        <div class="invalid-feedback">
+                            Verifica tu RUMP
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="rump" class="form-label">NEP Nro de Establecimiento Productivo</label>
+                        <input type="numeric" class="form-control" id="nep" name="nep">
+                        <div class="invalid-feedback">
+                            Verifica tu NEP
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12 clonarMarca">
+                        <div class="form-group col-md-12">
+                            <label for="marcas" class="form-label">Marca</label>
+                            <input type="text" class="form-control" name="marcas[]" />
 
                         </div>
                     </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-check-circle"></i>
-                                        Los datos fueron
-                                        ingresados con éxito</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+
+                    <div class="col-12 contenedorMarcas"></div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end pt-3">
+                            <button onclick="agregarMarca()" type="button"
+                                class="btn btn-direccion text-primary rounded-pill">+ Agregar
+                                Marca</button>
+                        </div>
+                    </div>
+
+
+                    <!-- DIRECCION TIPO DE EMPRESA -->
+
+
+                    <h4 class="fw-bold pt-3">Dirección</h4>
+                    <h5 class="fw-bold pt-2 pb-4">Domicilio real</h5>
+
+                    <div class="col-12">
+                        <label for="validationCalle" class="form-label">Calle</label>
+                        <input type="text" class="form-control" name="" id="calle" required>
+                        <div class="invalid-feedback">
+                            Ingresá una calle para tu dirección
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-6 col-md-3">
+                            <label for="altura" class="form-label">Altura</label>
+                            <input type="text" class="form-control" name="" id="altura" required>
+                            <div class="invalid-feedback">
+                                Ingresá una altura para tu dirección
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <label for="piso" class="form-label">Piso</label>
+                            <input type="text" class="form-control" id="piso" name="" required>
+                            <div class="invalid-feedback">
+                                Ingresá un piso para tu dirección
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <label for="dpto" class="form-label">Depto.</label>
+                            <input type="text" class="form-control" id="dpto" name="" required>
+                            <div class="invalid-feedback">
+                                Ingresá un departamento para tu dirección
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <label for="codPostal" class="form-label">C.P</label>
+                            <input type="text" class="form-control" id="codPostal" name="" required>
+                            <div class="invalid-feedback">
+                                Ingresá un codigo postal para tu dirección
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="provincia">Provincia</label>
+                            <select id="provincia" onchange="filtrarPartido($(this))" name="" class="form-select"
+                                required>
+                                <option value=''>Seleccioná una Provincia</option>"
+                                @foreach($provincias as $provincia)
+                                <option value="{{$provincia->id}}">{{$provincia->descripcion}}
+                                </option>
+                                @endforeach
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="municipio">Municipio</label>
+                            <select id="municipio" name="" onchange="filtrarLocalidad($(this))" class="form-select"
+                                required>
+
+
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group item-form">
+                            <label for="localidad">Localidad</label>
+                            <select name="" id="localidad" name="localidad" class="form-select" required>
+
+                            </select>
+
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingresá una opción valida
+                        </div>
+                    </div>
+
+
+                    <!-- DIRECCION TIPO / DEPOSITO / ETC -->
+
+                    <div class="clonarDireccion">
+                        <div class="row">
+                            <h5 class="fw-bold py-4">Domicilio especial</h5>
+
+                            <div class="form-group item-form">
+                                <label for="tDomicilio" class="form-label">Tipo</label>
+                                <select name="" id="tDomicilio" class="form-select" required>
+                                    <option value="">Seleccioná un tipo de tipo_domicilio</option>
+                                    @foreach($tDomicilio as $domicilio)
+                                    <option value="{{$domicilio->id}}">{{$domicilio->domicilio}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="invalid-feedback">
+                                Ingresá una opción valida
+                            </div>
+
+
+                            <div class="col-12">
+                                <label for="validationCalle" class="form-label">Calle</label>
+                                <input type="text" class="form-control" name="" id="calle" required>
+                                <div class="invalid-feedback">
+                                    Ingresá una calle para tu dirección
                                 </div>
-                                <div class="modal-body">
-                                    ¿ Estás seguro que deseas dar de alta la empresa ingresada?
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <label for="altura" class="form-label">Altura</label>
+                                    <input type="text" class="form-control" name="" id="altura" required>
+                                    <div class="invalid-feedback">
+                                        Ingresá una altura para tu dirección
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-cancelarModal rounded-pill"
-                                        data-bs-dismiss="modal">Cancelar</button>
-                                    <a href="08-confirmacion.html" type="button" class="btn btn-confirmarModal rounded-pill">Confirmar</a>
+
+                                <div class="col-6 col-md-3">
+                                    <label for="piso" class="form-label">Piso</label>
+                                    <input type="text" class="form-control" id="piso" name="" required>
+                                    <div class="invalid-feedback">
+                                        Ingresá un piso para tu dirección
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <label for="dpto" class="form-label">Depto.</label>
+                                    <input type="text" class="form-control" id="dpto" name="" required>
+                                    <div class="invalid-feedback">
+                                        Ingresá un departamento para tu dirección
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <label for="codPostal" class="form-label">C.P</label>
+                                    <input type="text" class="form-control" id="codPostal" name="" required>
+                                    <div class="invalid-feedback">
+                                        Ingresá un codigo postal para tu dirección
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group item-form">
+                                    <label for="provincia">Provincia</label>
+                                    <select id="provincia" onchange="filtrarPartido($(this))" name=""
+                                        class="form-select" required>
+                                        <option value=''>Seleccioná una Provincia</option>"
+                                        @foreach($provincias as $provincia)
+                                        <option value="{{$provincia->id}}">{{$provincia->descripcion}}
+                                        </option>
+                                        @endforeach
+                                    </select>
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingresá una opción valida
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group item-form">
+                                    <label for="municipio">Municipio</label>
+                                    <select id="municipio" name="" onchange="filtrarLocalidad($(this))"
+                                        class="form-select" required>
+
+
+                                    </select>
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingresá una opción valida
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group item-form">
+                                    <label for="localidad">Localidad</label>
+                                    <select name="" id="localidad" name="localidad" class="form-select" required>
+
+                                    </select>
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingresá una opción valida
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="contenedorDireccion"></div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end pt-3">
+                            <button type="button" onclick="agregarDireccion()"
+                                class="btn btn-direccion text-primary rounded-pill" required>+ Agregar
+                                Dirección</button>
+                        </div>
+                    </div>
 
 
+                    <h4 class="fw-bold pt-3">Datos de contacto</h4>
+
+
+                    <div class="clonarTelefono">
+                        <div class="row">
+                            <div class="col-6 col-md-4">
+                                <label for="codArea" class="form-label">Código de area</label>
+                                <div class="input-group">
+                                    <span class="input-group-text rounded-end" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" title="Agregar codArea"> 0 </span>
+                                    <input id="codArea" type="text" class="form-control" name="" required>
+
+                                    <div class="invalid-feedback">
+                                        Ingresá un cádigo de area
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-8">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <div class="input-group">
+                                    <input id="telefono" type="text" class="form-control" name="" required>
+
+                                    <div class="invalid-feedback">
+                                        Ingresá un teléfono valido
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 contenedorTelefono"></div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end pt-3">
+                            <button type="button" onclick="agregarTelefono()"
+                                class="btn btn-direccion text-primary rounded-pill">+ Agregar
+                                Teléfono</button>
+                        </div>
+                    </div>
+
+                    <div class="clonarEmail">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="validationMailEmpresa" class="form-label">E-Mail</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" id="validationMailEmpresa"
+                                        name="MailEmpresa[]" required>
+                                    <div class="invalid-feedback">
+                                        Ingresa un correo electronico
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedorEmail"></div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end pt-3">
+                            <button type="button" onclick="agregarEmail()"
+                                class="btn btn-direccion text-primary rounded-pill">+ Agregar
+                                E-Mail</button>
+                        </div>
+                    </div>
+
+
+
+                    <h4 class="fw-bold pt-3">Documentación y apoderamiento de la empresa</h4>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <input type="file" name="file" class="form-control" aria-label="file example" required>
+                            <div class="invalid-feedback">Porfavor ingrese un archivo valido</div>
+                        </div>
+
+                        <button type="button" class="btn btn-masInfo" data-bs-container="body" data-bs-toggle="popover"
+                            data-bs-placement="bottom" data-bs-trigger="focus" title="Requerimientos"
+                            data-bs-content="Los archivos deben ser menores que 500KB. Tipos de archivos permitidos: .pdf .rar .zip">
+                            <i class="fas fa-question-circle"></i> Más información
+                        </button>
+                    </div>
+
+                    <!-- BOTONES CANCELAR CONFIRMAR -->
+
+
+                    <div class="row mt-4">
+                        <div class="col-12 text-end">
+                            <a href="07-verificacion.html" type="button"
+                                class="btn btn-secondary fw-bold my-4 rounded-pill">
+                                Cancelar
+                            </a>
+                            <button type="button" class="btn btn-success fw-bold my-4 rounded-pill ms-3"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Confirmar datos
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-check-circle"></i>
+                            Los datos fueron
+                            ingresados con éxito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¿ Estás seguro que deseas dar de alta la empresa ingresada?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancelarModal rounded-pill"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <a href="08-confirmacion.html" type="button"
+                            class="btn btn-confirmarModal rounded-pill">Confirmar</a>
+                    </div>
                 </div>
             </div>
+        </div>
+
+
+
+        </div>
+
 
         </div>
     </main>
